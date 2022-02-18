@@ -1,0 +1,260 @@
+/**
+ * @name Bloop
+ * @author Leeprky#2063
+ * @version 1.1.0
+ * @description Bloop Rounded Theme
+ * @source https://github.com/leeprky/Bloop
+ * @updateUrl https://raw.githubusercontent.com/leeprky/Bloop/lode/betterdiscord/bloop-theme.css
+ * @authorId 224524143482241035
+ * @invite Ff3rqAYB89
+ * @donate https://www.paypal.com/paypalme/leeparkinson22
+ * @website https://leeprky.github.io/
+*/
+
+/* Bloop - v1.1.0 */
+@import url('https://corellanstoma.github.io/Menu-Icons/index.css');
+@import "https://leeprky.github.io/themes/Bloop/imports.css";
+
+@import url(https://raw.githack.com/CorellanStoma/Friends-Grid/main/clients/powercord.css);
+@import url(https://raw.githack.com/CorellanStoma/Context-Icons/main/theme.css);
+@import url(https://mr-miner1.github.io/Better-Badges/src/badges.css);
+
+:root {--im-aware: none !important} /* Turn To "block to enable */
+
+/* Transparency */
+
+/*
+@import "https://leeprky.github.io/themes/Bloop/source/glasscord.css";
+.theme-dark {
+  --glasscord-primary: #14151881 !important;
+  --glasscord-secondary: #0b0b0e60 !important;
+  --glasscord-secondary-alt: #16171a60 !important;
+  --glasscord-accent: var(--alt-color2) !important;
+  --glasscord-tertiary: #1011132f !important;
+  --glasscord-floating: #101214 !important;
+  --glasscord-backdrop: 0.55 !important;
+}
+
+.theme-light {
+  --glasscord-primary: #f5f1eb7e !important;
+  --glasscord-secondary: #eeece856 !important;
+  --glasscord-secondary-alt: #eeece870 !important;
+  --glasscord-accent: var(--alt-color2) !important;
+  --glasscord-tertiary: #fffdfc00 !important;
+  --glasscord-floating: #f7efe8e8 !important;
+  --glasscord-backdrop: 0.55 !important;
+}
+/* */
+
+.theme-dark {
+
+    /* Main Colours - Try Keep These The Same */
+    --main-colour: 87, 202, 154; /* RGB ONLY */
+    --main-colour2: #57ca9a; /* HEX ONLY */
+    --main-colour3: 155; /* HSL ONLY */
+    
+    /* BetterDiscord */
+    --bd-color: #1d8559;
+    --bd-color-hover: #be4058;
+    --public-servers: none; 
+  
+    /* Green Colours */
+    --green-color: var(--alt-color2); /* HEX ONLY */
+    --green-color2: var(--alt-color); /* RGB ONLY */
+    --green-bar-on: rgba(var(--alt-color), 0.3); /* RGBA ONLY */
+    --green-bar-bg: var(--green-color); /* RGB ONLY */
+    --green-slider-on: var(--green-color); /* RGB ONLY */
+    --green-slider-off: rgba(var(--alt-color), 0.4); /* RGBA ONLY */
+    --green-slider-dot: #fff;
+  
+    /* Status/Other Things Colours */
+    --wordmark-text: "Bloop";
+    --watermark: none;
+    --square-rounding: 8px;
+    --sidebar-fade: 93%;
+    --memberlist-fade: 93%;
+    --sidebar-channels: 95%;
+
+    --text-glow: 0 0px 2.5px;
+    --avatar-glow: 0 0 6px;
+    --general-glow-strong: 0 0 5px;
+    --general-glow-weak: 0 0 1px;
+
+    --gaps: 0px;
+
+    --rs-online-color: #4cee8f;  /* Colour for online status */
+    --rs-idle-color: #f1c73d;  /* Colour for idle status */
+    --rs-dnd-color: #df4460;  /* Colour for dnd status */
+    --rs-offline-color: #636b75;  /* Colour for offline status */
+    --rs-streaming-color: #643da7;  /* Colour for streaming status */
+    --rs-invisible-color: #747f8d;  /* Colour for invisible status - Note: this will only show for your own invisibility */
+  
+    --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
+    --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
+    --badges-everywhere-size: 15px; /*default = 15px*/
+
+    /* Header Colours */
+    --headers: #FFFFFF; /* */
+    --headers-secondary: #b9bbbe;
+  
+    --chatbox-colour: var(--background-secondary);
+    --mentioned: rgba(var(--alt-color), 0.4);
+    --mentioned-hover: rgba(var(--alt-color), 0.2);
+  
+    /* Text Colours */
+    --namesusernames: #FFFFFF;
+    --text: #dcddde;
+    --text-positive1: var(--green-color);
+    --muted: #70757e;
+    --links: var(--alt-color2);
+    
+    /* Interative Buttons */
+    --button-interactive: #bebebe;
+    --button-interactive-hover: var(--main-colour2);
+    --button-interactive-active: #bebebe;
+    --button-interactive-muted: #5b5e61;
+  
+    /* Backgrounds */
+    --main-background: #1f2024;
+    --main-background-alternative: #26282c;
+    --secondary-background: #18191b;
+    --secondary-background-alternative: #141618;
+    --tertiary: #131416;
+    --accent: var(--alt-color2);
+    --floating: #18191c;
+  
+    /* Hovering Colours */
+    --main-hover: rgba(var(--alt-color), 0.2);
+    --main-hover-active: rgba(var(--alt-color), 0.8);
+    --main-hover-selected: rgba(var(--alt-color), 0.5); 
+    --main-hover-accent: rgba(var(--alt-color), 0.1); 
+  
+    /* Infos */
+    --info-warning: var(--alt-color2);--help-warning: var(--alt-color2); --help-info: var(--alt-color2);--radio-group-dot: var(--alt-color);
+  
+    /* Drop Shadow */
+    --shadow-stroke: 0 0 0 1px rgba(4,4,5,0.15);
+    --shadow-low: 0 1px 0 rgba(18, 20, 36, 0.767),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+    --shadow-medium: 0 4px 4px rgba(0,0,0,0.16);
+    --shadow-high: 0 8px 16px rgba(0,0,0,0.24);
+  
+    /* Scollbars */
+    --scrollbars: none; /* Flex To See Scrollbars / None For None */
+    --scrollbar-small: #413838;
+    --scrollbar-small-track: transparent;
+    --scrollbar-large-thumb: #413838;
+    --scrollbar-large-track: #5d4e4e;
+    --scrollbar-small-scrollbar-color: #413838;
+    --scrollbar-small-scrollbar-color-track: #5d4e4e;
+  
+    /* Button Gradients */
+    --default-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--special-gradient: 315deg, rgba(var(--alt-color), 0.1) 0%, #c987b8 74%;--red-gradient: 315deg, #AA3738 0%, #F04747 74%;--red-hsl: hsl(359, 63%, 53%);--yellow-gradient: 315deg, #c29b1b 0%, #ffa640 74%;--yellow-hsl: hsl(46, 72%, 52%);--green-gradient: 315deg, #507a73 0%, #4b7c72  74%;--grey-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--white-gradient: 315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.342) 74%;
+    --font-normal: 500;--font-hover: bold;--font-size-hover: 15px;--hover-transition: 0.1s linear;--transform-normal: scale(1);--hover-transform: scale(1.15);--setting-hover-transform: scale(1.025);--button-hover-transform: scale(1.03);
+  }
+
+  .theme-light {
+
+    /* Main Colours - Try Keep These The Same */
+    --main-colour: 29, 133, 89; /* RGB ONLY */
+    --main-colour2: #1d8559; /* HEX ONLY */
+    --main-colour3: 155; /* HSL ONLY */
+      
+    --bd-color: #1d8559;
+    --bd-color-hover: #be4058;
+    --public-servers: none; 
+  
+    /* Green Colours */
+    --green-color: var(--alt-color2); /* HEX ONLY */
+    --green-color2: var(--alt-color); /* RGB ONLY */
+    --green-bar-on: rgba(var(--alt-color), 0.3); /* RGBA ONLY */
+    --green-bar-bg: var(--green-color); /* RGB ONLY */
+    --green-slider-on: var(--green-color); /* RGB ONLY */
+    --green-slider-off: rgba(var(--alt-color), 0.4); /* RGBA ONLY */
+    --green-slider-dot: #fff;
+  
+    /* Status/Other Things Colours */
+    --wordmark-text: "Bloop";
+    --watermark: none;
+    --square-rounding: 8px;
+    --sidebar-fade: 93%;
+    --memberlist-fade: 93%;
+    --sidebar-channels: 95%;
+
+    --text-glow: 0 0px 2.5px;
+    --avatar-glow: 0 0 6px;
+    --general-glow-strong: 0 0 5px;
+    --general-glow-weak: 0 0 1px;
+
+    --gaps: 0px;
+
+    --rs-online-color: #4cee8f;  /* Colour for online status */
+    --rs-idle-color: #f1c73d;  /* Colour for idle status */
+    --rs-dnd-color: #df4460;  /* Colour for dnd status */
+    --rs-offline-color: #636b75;  /* Colour for offline status */
+    --rs-streaming-color: #643da7;  /* Colour for streaming status */
+    --rs-invisible-color: #747f8d;  /* Colour for invisible status - Note: this will only show for your own invisibility */
+  
+    --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
+    --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
+    --badges-everywhere-size: 15px; /*default = 15px*/
+
+    /* Header Colours */
+    --headers: #383838; /* */
+    --headers-secondary: #343435;
+  
+    --chatbox-colour: var(--background-secondary);
+    --mentioned: rgba(var(--alt-color), 0.4);
+    --mentioned-hover: rgba(var(--alt-color), 0.2);
+  
+    /* Text Colours */
+    --namesusernames: #5c5a5a;
+    --text: #505050;
+    --text-positive1: var(--green-color);
+    --muted: #d1cecb;
+    --links: var(--alt-color2);
+    
+    /* Interative Buttons */
+    --button-interactive: #666565;
+    --button-interactive-hover: var(--main-colour2);
+    --button-interactive-active: #252525;
+    --button-interactive-muted: #999b9c;
+  
+    /* Backgrounds */
+    --main-background: #f5f1eb;
+    --main-background-alternative: #f5f1eb;
+    --secondary-background: #eeece8;
+    --secondary-background-alternative: #e7e6e4;
+    --tertiary: #ffffff;
+    --accent: var(--alt-color2);
+    --floating: #f5f5f7;
+  
+    /* Hovering Colours */
+    --main-hover: rgba(var(--alt-color), 0.2);
+    --main-hover-active: rgba(var(--alt-color), 0.8);
+    --main-hover-selected: rgba(var(--alt-color), 0.5); 
+    --main-hover-accent: rgba(var(--alt-color), 0.1); 
+  
+    /* Infos */
+    --info-warning: var(--alt-color2);--help-warning: var(--alt-color2); --help-info: var(--alt-color2);--radio-group-dot: var(--alt-color);
+  
+    /* Drop Shadow */
+    --shadow-stroke: 0 0 0 1px rgba(4,4,5,0.15);
+    --shadow-low: 0 1px 0 rgba(18, 20, 36, 0.767),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+    --shadow-medium: 0 4px 4px rgba(0,0,0,0.16);
+    --shadow-high: 0 8px 16px rgba(0,0,0,0.24);
+  
+    /* Scollbars */
+    --scrollbars: none; /* Flex To See Scrollbars / None For None */
+    --scrollbar-small: #413838;
+    --scrollbar-small-track: transparent;
+    --scrollbar-large-thumb: #413838;
+    --scrollbar-large-track: #5d4e4e;
+    --scrollbar-small-scrollbar-color: #413838;
+    --scrollbar-small-scrollbar-color-track: #5d4e4e;
+  
+    /* Button Gradients */
+    --default-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--special-gradient: 315deg, rgba(var(--alt-color), 0.1) 0%, #c987b8 74%;--red-gradient: 315deg, #AA3738 0%, #F04747 74%;--red-hsl: hsl(359, 63%, 53%);--yellow-gradient: 315deg, #c29b1b 0%, #ffa640 74%;--yellow-hsl: hsl(46, 72%, 52%);--green-gradient: 315deg, #507a73 0%, #4b7c72  74%;--grey-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--white-gradient: 315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.342) 74%;
+    --font-normal: 500;--font-hover: bold;--font-size-hover: 15px;--hover-transition: 0.1s linear;--transform-normal: scale(1);--hover-transform: scale(1.15);--setting-hover-transform: scale(1.025);--button-hover-transform: scale(1.03);
+  }
+
+:root {--outdated_bloop-120: none !important; --version: "1.1.0PC" !important; --build: "120" !important}

@@ -1,0 +1,12 @@
+{	
+"name": "Bloop",
+"description": "A Bloop Personal Theme",
+"version": "1.0.0",
+"author": "Leeprky#2063",
+"license": "MIT",
+"theme": "bloop-config.css",
+"splashTheme": "splash.css",
+"consent": "true",
+"preview": ["https://cdn.discordapp.com/attachments/825845432293785693/907286293875159050/unknown.png"],
+"discord": "Ff3rqAYB89"
+}
