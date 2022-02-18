@@ -1,0 +1,2 @@
+#!/bin/bash
+mpc | head -n2 |tail -n1 | awk '{print $4}' | head -c3 | tail -c2

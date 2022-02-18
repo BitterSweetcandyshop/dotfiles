@@ -1,0 +1,10 @@
+#!/bin/bash
+status=$(nordvpn status | head -n2 | tail -n1 | awk '{print $3}')
+
+if [ "$status" == "Connected" ]; then 
+	alacritty -e sudo nordvpn d
+	echo "#90c861" > ~/tmp/xmonad/vpnstat-hex
+else 
+	alacritty -e sudo nordvpn c
+	echo "#D35D6E" > ~q/tmp/xmonad/vpnstat-hex
+fi
