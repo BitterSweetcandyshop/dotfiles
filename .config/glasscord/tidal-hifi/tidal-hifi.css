@@ -1,0 +1,41 @@
+/* Transprency */
+/* Main Area */
+.css-1ezs1pk, .css-1emr5z5, .contentArea--1raSP, .css-9dfit8 {
+    background-color: transparent !important
+}
+.enable-scrollbar-styles {
+    background-color: rgba(0, 0, 0, 0.5) !important
+}
+
+/* Side bar */
+.sidebar--2_gw0 {
+    background: transparent !important
+}
+
+.sidebarWrapper {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    margin: 15px 0px 15px 10px;
+    border-radius: 5px;
+    
+}
+
+
+/* Bottom */
+.css-17hdx1j {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 5px;
+    right: 10px;
+    bottom: 5px;
+    max-width: calc(100% - 15px);
+}
+
+
+/* Search Bar */
+.css-1un3uiy:not(:hover) {
+    width: 110px;
+    transition: ease-in-out 1s;
+}
+.css-1un3uiy:hover {
+    width: 100%;
+    transition: ease-in-out 1s;
+}

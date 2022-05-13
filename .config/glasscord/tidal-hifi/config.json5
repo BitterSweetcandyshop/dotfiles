@@ -1,0 +1,7 @@
+{
+  startupDelayMs: 5000,
+  windowProps: {},
+  modules: {
+    CSSLoader: true,
+  },
+}
