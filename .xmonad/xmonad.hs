@@ -117,12 +117,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_s     ), ewwclose)
 
     -- Audio keys
-    , ((modm,                    xF86XK_AudioPlay), spawn "mpc toggle")
-    , ((modm,                    xF86XK_AudioPrev), spawn "mpc prev")
-    , ((modm,                    xF86XK_AudioNext), spawn "mpc next")
-    , ((0,                 xF86XK_AudioPlay), spawn "playerctl play-pause")
-    , ((0,                 xF86XK_AudioPrev), spawn "playerctl previous")
-    , ((0,                 xF86XK_AudioNext), spawn "playerctl next")
+    , ((0,                 xF86XK_AudioPlay), spawn "playerctl play-pause -p vlc,mpd,tidal-hifi,spotify,%any")
+    , ((modm,                 xF86XK_AudioPlay), spawn "playerctl --all-players stop")
+    , ((0,                 xF86XK_AudioPrev), spawn "playerctl previous -p vlc,mpd,tidal-hifi,spotify,%any")
+    , ((0,                 xF86XK_AudioNext), spawn "playerctl next -p vlc,mpd,tidal-hifi,spotify,%any")
     , ((0,                    xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 3 +5%")
     , ((0,                    xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 3 -5%")
     , ((0,                    xF86XK_AudioMute), spawn "pactl set-sink-mute 3 toggle")

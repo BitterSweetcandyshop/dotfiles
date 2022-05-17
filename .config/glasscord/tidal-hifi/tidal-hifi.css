@@ -1,34 +1,129 @@
+:root {
+    --color0: #6E6C7E !important;
+    --color1: #F28FAD !important;
+    --color2: #ABE9B3 !important;
+    --color3: #FAE3B0 !important;
+    --color4: #96CDFB !important;
+    --color5: #F5C2E7 !important;
+    --color6: #89DCEB !important;
+    --color7: #C3BAC6 !important;
+    --color8: #988BA2 !important;
+    --color9: #F28FAD !important;
+    --color10: #ABE9B3 !important;
+    --color11: #FAE3B0 !important;
+    --color12: #96CDFB !important;
+    --color13: #F5C2E7 !important;
+    --color14: #89DCEB !important;
+    --color15: #D9E0EE !important;
+    --black0: #161320;
+    --black1: #1A1826;
+    --black2: #1e1d2ea3; /* Background */
+    --black3: #302D41;
+    --black4: #575268;
+    --gray0: #6E6C7E;
+    --gray1: #988BA2;
+    --white: #D9E0EE;
+    --lavener: #C9CBFF;
+    --rosewater: #F5E0DC;
+}
+
 /* Transprency */
-/* Main Area */
-.css-1ezs1pk, .css-1emr5z5, .contentArea--1raSP, .css-9dfit8 {
-    background-color: transparent !important
+/* stuff??? */
+.css-1ezs1pk, .css-9dfit8 {
+    background-color: transparent!important;
 }
 .enable-scrollbar-styles {
-    background-color: rgba(0, 0, 0, 0.5) !important
+    background-color: transparent !important;
 }
 
 /* Side bar */
 .sidebar--2_gw0 {
-    background: transparent !important
+    background: var(--black2) !important;
 }
 
 .sidebarWrapper {
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    margin: 15px 0px 15px 10px;
-    border-radius: 5px;
-    
+    background-color: var(--black2) !important;
+}
+.sidebarWrapper > nav {
+    background-color: var(--black1) !important;
+    margin: 15px 10px 15px 10px;
+    border-radius: 15px;
+}
+
+/* Side bar rat */
+/* RAT */
+.sidebarWrapper > nav::before {
+    background-color: transparent;
+    content: "\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \_\a\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(q\\_/p)\a\ \ \ \ \ \ \ \ \ \ \ \ \ \ /\ \ .\ \ \ \ .\ \ \\\a\\_\_\ \ \ \ \ \ \ \ =\\_t\_/=\a\ \ \ \ \ \ )\ \ \ \ \ \  /\ \ \ \ \ \ \ \ \ \\\a\ \ \ (\ \ \ \ \ \ \ \(\ (\ \ \ \ \ \ \ \ \ )\ )\a\ \ \ \ \ \\ \ \ \ \ \ /\\)\ \ \ (/\\\a\ \ \ \ \ \ \ \ \ `-\\ \ \  Y\ \ \ \ \ \ /\a\ \ \ \ \ \ \ \ \ \ \ \ nn^nn" attr(title) !important;
+    white-space: pre-wrap;
+    color: white !important;
+    padding-bottom: 10px;
+    position: fixed;
+    bottom: 10px;
+}
+
+/* User Portoflio Button Side Bar */
+button.item--3_8nW {
+    display: flexbox;
+    flex-direction:column;
+    height: auto;
+    justify-items: center;
+    padding: unset;
+    margin: 40px 20px;
+}
+button.item--3_8nW:hover {
+    background-color: transparent;
+    text-decoration: none !important;
+}
+.profilePicture--lPH85 {
+    width: 100px !important;
+    border-radius: 15px !important;
+    height: 100px !important;
+}
+.profileName--3dYg0 {
+    height: 30px !important;
+}
+.profileIconWrapper--2fP1t {
+    position: inherit;
+    color: var(--white);
+}
+.userLoggedIn--3jqOa {
+    height: 170px;
 }
 
 
 /* Bottom */
 .css-17hdx1j {
-    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-color: var(--black1) !important;
     border-radius: 5px;
     right: 10px;
-    bottom: 5px;
-    max-width: calc(100% - 15px);
+    bottom: 0px;
 }
 
+/* main */
+#main > div:nth-child(2) {
+    margin-top: 15px;
+    padding-top: 20px;
+    margin-right: 14px;
+    margin-bottom: 100px;
+    background-color: var(--black1)!important;
+}
+::-webkit-scrollbar, ::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Top Bar */
+.css-1emr5z5 {
+    display: none;
+}
+#mainHeader {
+    background-color: var(--black1) !important;
+    height: 65px;
+    border-radius: 15px 15px 0px 0px;
+    position: relative;
+    top: 15px;
+    padding-right: 10px;
+}
 
 /* Search Bar */
 .css-1un3uiy:not(:hover) {
