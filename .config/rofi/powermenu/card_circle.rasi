@@ -41,7 +41,7 @@ prompt {
 
 textbox-prompt-colon {
 	expand: 						true;
-	str: 							"Goodbye, Axarva";
+	str: 							"Toodles BitterSweet";
 	background-color: 				@background;
 	text-color: 					@selected;
     padding:                        3% 0.5% 0% 0%;

@@ -96,7 +96,7 @@ sidebarlaunch = spawn "exec ~/bin/eww open-many player time_side sys_side slider
 ewwclose = spawn "exec ~/bin/eww close-all"
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
 maimsave = spawn "maim -s ~/Documents/flameshot/$(date +%s).png && notify-send \"Screenshot\" \"Saved to Files\" -i flameshot"
-rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\" "
+rofi_launcher = spawn "rofi -show drun"
 
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
