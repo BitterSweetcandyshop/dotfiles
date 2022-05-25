@@ -1,4 +1,4 @@
-# BitterSweet's Dotfiles
+# BitterSweet's Ratppuccin Dotfiles
 Transparent Catppuccin, Rats (no not the software, the fluffly rodent)
 
 Also the progress par is pacman for ncmpcpp
@@ -15,13 +15,14 @@ Also the progress par is pacman for ncmpcpp
 - powercord (enable transparency)
 - picom
 - candy-icons
+- conky
 - playerctl
 - alacritty
 - ranger (snow)
 - music support: mpd, tidal-hifi, spotify, %any (playerctl)
 
 ## Note
-> Yes, I used axarva's dotfiles to learn, I learn by modding best, the dotfiles I have is very different.
+> Atm polybar config is required since it manages the audio source, this is what it is untill I make keybinds
 
 ### Support
 You should know what you're doing, DM info is on profile.

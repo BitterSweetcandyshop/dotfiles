@@ -117,10 +117,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_s     ), ewwclose)
 
     -- Audio keys
-    , ((0,                 xF86XK_AudioPlay), spawn "playerctl play-pause -p vlc,mpd,tidal-hifi,spotify,%any")
-    , ((modm,                 xF86XK_AudioPlay), spawn "playerctl --all-players stop")
-    , ((0,                 xF86XK_AudioPrev), spawn "playerctl previous -p vlc,mpd,tidal-hifi,spotify,%any")
-    , ((0,                 xF86XK_AudioNext), spawn "playerctl next -p vlc,mpd,tidal-hifi,spotify,%any")
+    , ((0,                 xF86XK_AudioPlay), spawn "playerctl play-pause -p $(cat ~/.config/polybar/scripts/source.txt)")
+    , ((modm,                 xF86XK_AudioPlay), spawn "playerctl --all-players pause")
+    , ((0,                 xF86XK_AudioPrev), spawn "playerctl previous -p $(cat ~/.config/polybar/scripts/source.txt)")
+    , ((0,                 xF86XK_AudioNext), spawn "playerctl next -p $(cat ~/.config/polybar/scripts/source.txt)")
     , ((0,                    xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 3 +5%")
     , ((0,                    xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 3 -5%")
     , ((0,                    xF86XK_AudioMute), spawn "pactl set-sink-mute 3 toggle")
@@ -134,7 +134,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 xK_Print), maimsave)
 
     -- My Stuff
-    , ((modm,               xK_b     ), spawn "exec ~/bin/bartoggle")
     , ((modm,               xK_z     ), spawn "exec ~/bin/inhibit_activate")
     , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/inhibit_deactivate")
     , ((modm .|. shiftMask, xK_a     ), clipboardy)
@@ -344,7 +343,8 @@ myStartupHook = do
   spawnOnce "mpd"
   spawnOnce "mpd-mpris"
   spawnOnce "~/.config/polybar/launch.sh"
-  spawnOnce "feh --bg-scale ~/Wallpapers/mime-dash.png"
+--  spawnOnce "feh --bg-scale ~/Wallpapers/mime-dash.png"
+  spawnOnce "feh ~/Wallpapers/cat/cat_juuzou_phone_bw.jpg --bg-max -B '#161320'"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
