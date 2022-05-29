@@ -89,7 +89,7 @@ addEWMHFullscreen   = do
 -- Key bindings. Add, modify or remove key bindings here.
 --
 clipboardy :: MonadIO m => m () -- Don't question it 
-clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme ~/.config/rofi/launcher/style.rasi"
+clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme ~/.config/rofi/config.rasi"
 
 centerlaunch = spawn "exec ~/bin/eww open-many blur_full vpn-icon profile incognito-icon power_full reboot_full lock_full suspend_full logout_full player_mini screenshot ncmpcpp-icon"
 sidebarlaunch = spawn "exec ~/bin/eww open-many player time_side sys_side sliders_side"
@@ -105,7 +105,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- lock screen
-    , ((modm,               xK_F1    ), spawn "betterlockscreen -l && playerctl play-pause")
+    , ((modm,               xK_F1    ), spawn "betterlockscreen -l && playerctl -a pause")
 
     -- launch rofi and dashboard
     , ((modm,               xK_o     ), rofi_launcher)
@@ -117,10 +117,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_s     ), ewwclose)
 
     -- Audio keys
-    , ((0,                 xF86XK_AudioPlay), spawn "playerctl play-pause -p $(cat ~/.config/polybar/scripts/source.txt)")
+    , ((0,                 xF86XK_AudioPlay), spawn "playerctl play-pause -p $(cat ~/.scripts/music/source.txt)")
     , ((modm,                 xF86XK_AudioPlay), spawn "playerctl --all-players pause")
-    , ((0,                 xF86XK_AudioPrev), spawn "playerctl previous -p $(cat ~/.config/polybar/scripts/source.txt)")
-    , ((0,                 xF86XK_AudioNext), spawn "playerctl next -p $(cat ~/.config/polybar/scripts/source.txt)")
+    , ((0,                 xF86XK_AudioPrev), spawn "playerctl previous -p $(cat ~/.scripts/music/source.txt)")
+    , ((0,                 xF86XK_AudioNext), spawn "playerctl next -p $(cat ~/.scripts/music/source.txt)")
     , ((0,                    xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 3 +5%")
     , ((0,                    xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 3 -5%")
     , ((0,                    xF86XK_AudioMute), spawn "pactl set-sink-mute 3 toggle")
@@ -143,7 +143,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- GAPS!!!
     , ((modm .|. controlMask, xK_g), sendMessage $ ToggleGaps)               -- toggle all gaps
-    , ((modm .|. shiftMask, xK_g), sendMessage $ setGaps [(L,30), (R,30), (U,40), (D,60)]) -- reset the GapSpec
+    , ((modm .|. shiftMask, xK_g), sendMessage $ setGaps [(L,40), (R,30), (U,40), (D,90)]) -- reset the GapSpec
     
     , ((modm .|. controlMask, xK_t), sendMessage $ IncGap 10 L)              -- increment the left-hand gap
     , ((modm .|. shiftMask, xK_t     ), sendMessage $ DecGap 10 L)           -- decrement the left-hand gap
@@ -157,7 +157,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. controlMask, xK_i), sendMessage $ IncGap 10 R)              -- increment the right-hand gap
     , ((modm .|. shiftMask, xK_i     ), sendMessage $ DecGap 10 R)           -- decrement the right-hand gap
 
-     -- Rotate through the available layout algorithms
+    -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
 
     --  Reset the layouts on the current workspace to default
@@ -245,15 +245,12 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-button1, Set the window to floating mode and move by dragging
     [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w
                                        >> windows W.shiftMaster))
+    -- mod-button1, Resize with shift
+    , ((modm .|. shiftMask, button1), (\w -> focus w >> mouseResizeWindow w
+                                       >> windows W.shiftMaster))
 
     -- mod-button2, Raise the window to the top of the stack
     , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
-
-    -- mod-button3, Set the window to floating mode and resize by dragging
-    , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
-                                       >> windows W.shiftMaster))
-
-    -- you may also bind events to the mouse scroll wheel (button4 and button5)
     ]
 
 ------------------------------------------------------------------------
@@ -267,7 +264,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts(tiled ||| Mirror tiled ||| Full)
+myLayout = avoidStruts (tiled ||| Full )
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -327,24 +324,20 @@ myLogHook = return ()
 ------------------------------------------------------------------------
 -- Startup hook
 
--- Perform an arbitrary action each time xmonad starts or is restarted
--- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize
--- per-workspace layout choices.
---
--- By default, do nothing.
 myStartupHook = do
---  spawnOnce "exec ~/bin/bartoggle"
-  spawnOnce "exec ~/bin/eww daemon"
-  spawn "xsetroot -cursor_name left_ptr"
-  spawn "exec ~/bin/lock.sh"
+spawnOnce "python ~/.scripts/music/art_updater.py"
+  spawnOnce "eww daemon"
   spawnOnce "picom -b"
   spawnOnce "greenclip daemon"
   spawnOnce "dunst"
   spawnOnce "mpd"
-  spawnOnce "mpd-mpris"
-  spawnOnce "~/.config/polybar/launch.sh"
---  spawnOnce "feh --bg-scale ~/Wallpapers/mime-dash.png"
-  spawnOnce "feh ~/Wallpapers/cat/cat_juuzou_phone_bw.jpg --bg-max -B '#161320'"
+  spawnOnce "nohup glava &"
+  spawn "mpd-mpris"
+  spawn "xsetroot -cursor_name left_ptr"
+  spawn "exec ~/bin/lock.sh"
+  spawn "bash ~/.config/conky/start.sh"
+  spawn "~/.config/polybar/launch.sh"
+  spawn "feh --bg-scale ~/Wallpapers/cat_juzo.png"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
@@ -375,7 +368,7 @@ defaults = def {
 
       -- hooks, layouts
         manageHook = myManageHook, 
-        layoutHook = gaps [(L,30), (R,30), (U,40), (D,60)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ smartBorders $ myLayout,
+        layoutHook = gaps [(L,100), (R,30), (U,40), (D,60)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) $ smartBorders $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook >> addEWMHFullscreen

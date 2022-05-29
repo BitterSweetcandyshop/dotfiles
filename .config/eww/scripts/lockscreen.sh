@@ -1,5 +1,5 @@
 #!/bin/bash
 mpc pause &
-playerctl pause &
+playerctl -a  pause &
 amixer set Master mute &
 betterlockscreen -l &

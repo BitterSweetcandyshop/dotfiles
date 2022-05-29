@@ -1,3 +1,21 @@
+```
+dumb ass credit title I was told I should start using smh
+A BitterSweet
+       ▄▄█▀▀▀▄█                      ▀██             ▄█▀▀▀▄█  ▀██
+     ▄█▀     ▀   ▄▄▄▄   ▄▄ ▄▄▄     ▄▄ ██   ▄▄▄▄ ▄▄▄  ██▄▄  ▀   ██ ▄▄     ▄▄▄   ▄▄▄ ▄▄▄
+     ██         ▀▀ ▄██   ██  ██  ▄▀  ▀██    ▀█▄  █    ▀▀███▄   ██▀ ██  ▄█  ▀█▄  ██▀  ██
+     ▀█▄      ▄ ▄█▀ ██   ██  ██  █▄   ██     ▀█▄█   ▄     ▀██  ██  ██  ██   ██  ██    █
+      ▀▀█▄▄▄▄▀  ▀█▄▄▀█▀ ▄██▄ ██▄ ▀█▄▄▀██▄     ▀█    █▀▄▄▄▄█▀  ▄██▄ ██▄  ▀█▄▄█▀  ██▄▄▄▀
+                                           ▄▄ █                                 ██
+                                            ▀▀                                 ▀▀▀▀
+                                                                                    	rice
+reddit: BitterSweetcandyshop
+github: BitterSweetcandyshop
+discord: BitterSweet#1337
+revolt: @BitterSweet
+matrix: bittersweetcandyshop
+```
+
 # BitterSweet's Ratppuccin Dotfiles
 Transparent Catppuccin, Rats (no not the software, the fluffly rodent)
 
@@ -22,7 +40,7 @@ Also the progress par is pacman for ncmpcpp
 - music support: mpd, tidal-hifi, spotify, %any (playerctl)
 
 ## Note
-> Atm polybar config is required since it manages the audio source, this is what it is untill I make keybinds
+> Almost everything relies on the .scripts folder, I made sure to do my best to make it usable by anyone
 
 ### Support
-You should know what you're doing, DM info is on profile.
+

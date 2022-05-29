@@ -11,18 +11,19 @@
           <button onclick="mpc next"></button>
         </box>
         <box orientation="h" class="volume" space-evenly="false" halign="center">
-          <scale min="0" max="101" value="{{pos}}" onchange="mpc seek {}%"/>
+          <scale min="0" max="101" active="true" value="{{pos}}"/>
+          <!-- scale min="0" active="false" max="101" value="{{ram-used}}"/ -->
         </box>
       </box>
     </def>
-    <def name="player_mini">
+  <def name="player_mini">
       <box orientation="h"  space-evenly="false">
         <box class="musicart-side" style="background-image: url('{{cover}}');">{{art}}</box>
         <box class="musicstuff-side" orientation="v" space-evenly="false">
           <box class="musicinfo-side">{{music3}}</box>
           <box orientation="h" halign="center" class="musicbtn-side" space-evenly="false">
             <button onclick="mpc prev"></button> 
-            <button class="pause-play-side" onclick="mpc toggle">{{musicstat}}</button>
+	    <button class="pause-play-side" onclick="playerctl play-pause">{{musicstat}}</button>
             <button onclick="mpc next"></button>
           </box>
         </box>
@@ -108,7 +109,7 @@
         </box>
       </box>
     </def>
-     <def name="home_dir">
+    <def name="home_dir">
       <box orientation="v" space-evenly="true" class="home-dir">
         <button class="l1" onclick="(alacritty -e ranger --selectfile={{l1}})">{{l1-processed}}</button>
         <button class="l2" onclick="(alacritty -e ranger --selectfile={{l2}})">{{l2-processed}}</button>
@@ -125,7 +126,7 @@
     </def>
     <def name="vpn">
       <box orientation="v" space-evenly="true">
-	      <button class="vpn-icon" onclick="~/.config/eww/scripts/vpntoggle" style="color: {{vpn-hex}}">嬨{{getvpnstat}}</button>
+        <button class="vpn-icon" onclick="~/.config/eww/scripts/vpntoggle" style="color: {{vpn-hex}}">嬨{{getvpnstat}}</button>
       </box>
     </def>
     <def name="incognito">
@@ -143,7 +144,7 @@
       </box>
     </def>
     <!-- <def name="powermenu">
-       <box orientation="h" halign="center" class="sysbtn" space-evenly="true">
+      <box orientation="h" halign="center" class="sysbtn" space-evenly="true">
           <button class="shutdown-side" onclick="~/.config/eww/scripts/shutdown.sh"></button> 
           <button class="reboot-side" onclick="~/.config/eww/scripts/reboot.sh"></button>
           <button class="lock-side" onclick="~/.config/eww/scripts/lockscreen.sh"></button>
@@ -157,12 +158,12 @@
 
   <variables>
     <!-- Music vars -->
-    <script-var name="music" interval="1s">mpc current -f %artist% - %title%</script-var>
-    <script-var name="music2" interval="1s">mpc current -f %artist%</script-var>
-    <script-var name="music3" interval="1s">~/.config/eww/scripts/gettitle</script-var>
+    <script-var name="music" interval="1s">~/.scripts/music/music_fancy.sh</script-var>
+    <script-var name="music2" interval="1s">python ~/.scripts/music/playerctl_out.py metadata artist</script-var>
+    <script-var name="music3" interval="1s">python ~/.scripts/music/playerctl_out.py metadata title</script-var>
     <script-var name="volume" interval="3ms">~/.config/eww/scripts/getvol</script-var>
     <script-var name="bright" interval="1ms">~/.config/eww/scripts/getbri</script-var>
-    <script-var name="musicstat" interval="1s">~/bin/spotifystatus</script-var>
+    <script-var name="musicstat" interval="1s">~/.config/eww/scripts/musicstatus.sh</script-var>
     <script-var name="cover" interval="1s">~/.config/eww/scripts/echoart</script-var>
     <script-var name="pos" interval="1s">~/.config/eww/scripts/getposition</script-var>
 
@@ -180,7 +181,7 @@
 
     <!--Battery charge vars-->
     <script-var name="battery-remaining" interval="2m">cat /sys/class/power_supply/BAT0/capacity</script-var>
-    <script-var name="bat-icon" interval="2m">~/.config/tint2/scripts/battery.sh</script-var>
+    <script-var name="bat-icon" interval="2m">~/.config/eww/scripts/battery.sh</script-var>
 
     <!-- Home-dir stuff -->
     <script-var name="l1-processed" interval="20h">~/.config/eww/scripts/home-dir/l1-processed</script-var>
@@ -205,28 +206,28 @@
 
   <windows>
     <!-- Sidebar stuff -->
-    <window name="player_mini">
-      <geometry x="1750px" y="880px" width="340px" height="110px"/>
-      <widget>
-        <player_mini/>
-      </widget>
-    </window>
     <window name="time_side">
-      <geometry x="10px" y="65px" width="300px" height="135px"/>
+      <geometry x="25px" y="65px" width="335px" height="135px"/>
       <widget>
         <time_side/>
       </widget>
     </window>
     <window name="sliders_side">
-      <geometry x="10px" y="210px" width="300px" height="205px"/>
+      <geometry x="25px" y="210px" width="335" height="205px"/>
       <widget>
         <sliders_side/>
       </widget>
     </window>
     <window name="sys_side">
-      <geometry x="10px" y="425px" width="300px" height="153px"/>
+      <geometry x="25px" y="425px" width="335px" height="153px"/>
       <widget>
         <sys_side/>
+      </widget>
+    </window>
+    <window name="player">
+      <geometry x="25px" y="590px" width="335px" height="400px"/>
+      <widget>
+        <player/>
       </widget>
     </window>
 
@@ -249,7 +250,7 @@
         <power_full/>
       </widget>
     </window>
-     <window name="reboot_full">
+    <window name="reboot_full">
       <geometry x="2100px" y="520" width="200px" height="110px"/>
       <widget>
         <reboot_full/>
@@ -261,22 +262,16 @@
         <lock_full/>
       </widget>
     </window>
-     <window name="suspend_full">
+    <window name="suspend_full">
       <geometry x="2100px" y="760px" width="200px" height="110px"/>
       <widget>
         <suspend_full/>
       </widget>
     </window>
-     <window name="logout_full">
+    <window name="logout_full">
       <geometry x="2100px" y="880" width="200px" height="110px"/>
       <widget>
         <logout_full/>
-      </widget>
-    </window>
-     <window name="player">
-      <geometry x="10px" y="590px" width="300px" height="400px"/>
-      <widget>
-        <player/>
       </widget>
     </window>
     <window name="profile">
@@ -285,13 +280,13 @@
         <profile/>
       </widget>
     </window>
-     <window name="home_dir">
+    <window name="home_dir">
       <geometry x="1160px" y="350px" width="240px" height="520px"/>
       <widget>
         <home_dir/>
       </widget>
     </window>
-     <window name="screenshot">
+    <window name="screenshot">
       <geometry x="1540px" y="640px" width="200px" height="110px"/>
       <widget>
         <screenshot/>
@@ -313,6 +308,12 @@
       <geometry x="1540px" y="760px" width="200px" height="110px"/>
       <widget>
         <ncmpcpp/>
+      </widget>
+    </window>
+    <window name="player_mini">
+      <geometry x="1750px" y="880px" width="340px" height="110px"/>
+      <widget>
+        <player_mini/>
       </widget>
     </window>
     <window name="blur_full">

@@ -4,7 +4,7 @@ env:
   TERM: alacritty
 
 window:
-  opacity: 0.95
+  opacity: 0.5
   padding:
     x: 25
     y: 25

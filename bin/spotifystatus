@@ -1,0 +1,11 @@
+#!/bin/sh
+
+STATUS=$(mpc | awk '{print $1}' | head -n2 | tail -n1)
+
+    if [ "$STATUS" = "[playing]" ]; then
+        STATUS=""
+    else
+        STATUS=""
+    fi
+
+printf "$STATUS"

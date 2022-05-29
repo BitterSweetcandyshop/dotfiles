@@ -1,8 +1,41 @@
+/*
+
+:root {
+    --color0: #6E6C7E !important;
+    --color1: #F28FAD !important;
+    --color2: #ABE9B3 !important;
+    --color3: #FAE3B0 !important;
+    --color4: #96CDFB !important;
+    --color5: #F5C2E7 !important;
+    --color6: #89DCEB !important;
+    --color7: #C3BAC6 !important;
+    --color8: #988BA2 !important;
+    --color9: #F28FAD !important;
+    --color10: #ABE9B3 !important;
+    --color11: #FAE3B0 !important;
+    --color12: #96CDFB !important;
+    --color13: #F5C2E7 !important;
+    --color14: #89DCEB !important;
+    --color15: #D9E0EE !important;
+    --black0: #161320;
+    --black1: #1A1826;
+    --black2: #1e1d2e;
+    --black3: #302D41;
+    --black4: #575268;
+    --gray0: #6E6C7E;
+    --gray1: #988BA2;
+    --white: #D9E0EE;
+    --lavener: #C9CBFF;
+    --rosewater: #F5E0DC;
+}
+*/
+
+
 *{
   all: unset;
 }
 window {
-  background-color: #121212;
+  background-color: #1A1826;
 /*  background-color: #000000; */
 	color: #ffd5cd;
   font-family: Museo Sans;
@@ -10,15 +43,15 @@ window {
 
 button {
   all: unset;
-  background-color: #121212;
+  background-color: #1A1826;
   padding: 10px;
 }
 
 .musicart {
-  background-size: 260px;
-  min-height: 260px;
-  min-width: 260px;
-  margin: 20px;
+  background-size: 250px;
+  min-height: 250px;
+  min-width: 250px;
+  margin: 43px; // I have no clue
   border-radius: 10px
   // padding: 10px;
 }
@@ -96,7 +129,7 @@ button {
 }
 
 .musicart-side {
-  background-size: 80px;
+  background-size: 10px;
   min-height: 70px;
   min-width: 80px;
   margin: 15px;
@@ -143,8 +176,6 @@ button {
 }
 
 
-
-
 .sliders-side slider {
   all: unset;
   color: #ffd5cd;
@@ -181,7 +212,7 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 170px;
+  min-width: 220px;
   margin-top: 10px;
   margin-left: 20px;
 }
@@ -190,7 +221,7 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 170px;
+  min-width: 220px;
   margin-top: 10px;
   margin-left: 16px;
 }
@@ -199,7 +230,7 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 170px;
+  min-width: 220px;
   margin-top: 10px;
   margin-left: 17px;
 }
@@ -208,9 +239,9 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 170px;
+  min-width: 220px;
   margin-top: 10px;
-  margin-left: 13px;
+  margin-left: 10px;
 }
 
 .label-battery-side, .label-bright-side, .label-ram-side, .label-vol-side{

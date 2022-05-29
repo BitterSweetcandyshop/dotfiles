@@ -18,7 +18,7 @@ configuration {
 	sidebar-mode: 					false;
 }
 
-@import "black_powermenu.rasi"
+@theme "catppuccin"
 
 window {
     transparency:                   "real";

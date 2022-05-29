@@ -1,6 +1,6 @@
 /* Message Dialog */
 
-@import "black_powermenu.rasi"
+@theme catppuccin
 
 * {
     background-color:       @background;

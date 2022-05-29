@@ -1,2 +1,2 @@
 #!/bin/bash
-echo ~/.config/eww/images/cover.png
+echo ~/.scripts/resources/cover.png

@@ -1,12 +1,2 @@
 #!/bin/bash
-title=$(mpc current -f %title%)
-count=$(echo -n "$title" | wc -m)
-if [ -z "$title" ]; then
-	echo "Nothing Playing...";
-else
-	if [ "$count" -le 18 ]; then
-		echo $title
-	else 
-		echo $(mpc current -f %title% | awk '{print $1, $2}')...
-	fi
-fi
+python ~/.scripts/music/playerctl_out.py metadata title
