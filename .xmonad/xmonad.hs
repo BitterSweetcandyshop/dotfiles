@@ -60,7 +60,7 @@ myModMask       = mod4Mask
 --
 -- A tagging example:
 --
--- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
+-- workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
 myWorkspaces    = ["\63083", "\63288",  "\63107", "\63391", "\61713", "\61884"]
 
@@ -124,6 +124,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                    xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 3 +5%")
     , ((0,                    xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 3 -5%")
     , ((0,                    xF86XK_AudioMute), spawn "pactl set-sink-mute 3 toggle")
+
+
+    -- Audio Source
+    , ((modm,                  xF86XK_AudioPrev), spawn "python ~/.scripts/music/music_source.py back")
+    , ((modm,                  xF86XK_AudioNext), spawn "python ~/.scripts/music/music_source.py next")
 
     -- Brightness keys
     , ((0,                    xF86XK_MonBrightnessUp), spawn "brightnessctl s +10%")
@@ -224,7 +229,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-[1..9], Move client to workspace N
     --
     [((m .|. modm, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_6]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
 
@@ -325,14 +330,14 @@ myLogHook = return ()
 -- Startup hook
 
 myStartupHook = do
-spawnOnce "python ~/.scripts/music/art_updater.py"
-  spawnOnce "eww daemon"
+  spawnOnce "python ~/.scripts/music/art_updater.py"
+  spawnOnce "exec eww daemon"
   spawnOnce "picom -b"
   spawnOnce "greenclip daemon"
   spawnOnce "dunst"
   spawnOnce "mpd"
-  spawnOnce "nohup glava &"
-  spawn "mpd-mpris"
+--  spawnOnce "glava &" -- This will 100% destroy your cpu
+  spawn "mpDris2"
   spawn "xsetroot -cursor_name left_ptr"
   spawn "exec ~/bin/lock.sh"
   spawn "bash ~/.config/conky/start.sh"
@@ -368,7 +373,7 @@ defaults = def {
 
       -- hooks, layouts
         manageHook = myManageHook, 
-        layoutHook = gaps [(L,100), (R,30), (U,40), (D,60)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) $ smartBorders $ myLayout,
+        layoutHook = gaps [(L,100), (R,30), (U,40), (D,60)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ smartBorders $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook >> addEWMHFullscreen

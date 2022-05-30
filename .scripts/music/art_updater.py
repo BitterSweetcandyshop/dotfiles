@@ -1,3 +1,5 @@
+# spotify tidal-hifi and mpd only atm
+
 from time import sleep
 import subprocess
 import requests
@@ -47,6 +49,21 @@ while True:
             if not str(check_life)[2:-3] == "Playing":
                 no_cover()
             continue
+
+    if source == "tidal-hifi":
+        try:
+            tidal_data = requests.get('http://localhost:47836/current').json()
+            cover_web = requests.get(tidal_data["image"])
+            cover = open(f"/home/{os.getlogin()}/.scripts/resources/cover.png", "wb")
+            cover.write(cover_web.content)
+            cover.close()
+        except:
+            try:
+                shutil.copy( tidal_data["icon"], f"/home/{os.getlogin()}/.scripts/resources/cover.png")
+            except:
+                if not str(check_life)[2:-3] == "Playing":
+                    no_cover()
+                continue
     
     # increase this if your cpu starts to hate you
-    sleep(5)
+    sleep(3)

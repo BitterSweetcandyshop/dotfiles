@@ -24,7 +24,7 @@ update_hooks() {
     done < <(echo "$1")
 }
 
-PLAYERCTL_STATUS=$(playerctl status --player=$PLAYER 2>/dev/null)
+PLAYERCTL_STATUS=`playerctl status --player=$PLAYER 2>/dev/null`
 EXIT_CODE=$?
 
 if [ $EXIT_CODE -eq 0 ]; then
