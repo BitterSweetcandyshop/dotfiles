@@ -342,7 +342,7 @@ myStartupHook = do
   spawn "exec ~/bin/lock.sh"
   spawn "bash ~/.config/conky/start.sh"
   spawn "~/.config/polybar/launch.sh"
-  spawn "feh --bg-scale ~/Wallpapers/cat_juzo.png"
+  spawn "feh --bg-scale ~/Wallpapers/favs/cat_juzo.png"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 

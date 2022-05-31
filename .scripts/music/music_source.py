@@ -13,7 +13,7 @@ if cmd == "back":
 elif cmd == "next":
     use = 1
 
-players = ["mpd", "tidal-hifi", "spotify", "%any"]
+players = ["mpd", "tidal-hifi", "spotify", "ncspot",  "%any"]
 current_source = open(f"/home/{os.getlogin()}/.scripts/music/source.txt", 'r').read().replace("\n", "") or "%any"
 writable_source = open(f"/home/{os.getlogin()}/.scripts/music/source.txt", 'w')
 
