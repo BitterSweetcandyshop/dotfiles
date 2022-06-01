@@ -1,2 +1,2 @@
 #!/bin/bash
-echo ~/.scripts/resources/cover.png
+echo "$HOME/.scripts/resources/cover.png"

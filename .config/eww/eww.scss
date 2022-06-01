@@ -1,59 +1,32 @@
-/*
-
-:root {
-    --color0: #6E6C7E !important;
-    --color1: #F28FAD !important;
-    --color2: #ABE9B3 !important;
-    --color3: #FAE3B0 !important;
-    --color4: #96CDFB !important;
-    --color5: #F5C2E7 !important;
-    --color6: #89DCEB !important;
-    --color7: #C3BAC6 !important;
-    --color8: #988BA2 !important;
-    --color9: #F28FAD !important;
-    --color10: #ABE9B3 !important;
-    --color11: #FAE3B0 !important;
-    --color12: #96CDFB !important;
-    --color13: #F5C2E7 !important;
-    --color14: #89DCEB !important;
-    --color15: #D9E0EE !important;
-    --black0: #161320;
-    --black1: #1A1826;
-    --black2: #1e1d2e;
-    --black3: #302D41;
-    --black4: #575268;
-    --gray0: #6E6C7E;
-    --gray1: #988BA2;
-    --white: #D9E0EE;
-    --lavener: #C9CBFF;
-    --rosewater: #F5E0DC;
-}
-*/
-
-
-*{
+* {
   all: unset;
 }
 window {
-  background-color: #1A1826;
-/*  background-color: #000000; */
+  background-color: #1e1d2e;
 	color: #ffd5cd;
   font-family: Museo Sans;
 }
 
 button {
   all: unset;
-  background-color: #1A1826;
+  background-color: #1e1d2e;
   padding: 10px;
 }
 
+.header {
+  font-size: 75px;
+}
+
+.musicstuff-side {
+  font-size: 40px;
+}
+
 .musicart {
-  background-size: 250px;
-  min-height: 250px;
-  min-width: 250px;
-  margin: 43px; // I have no clue
-  border-radius: 10px
-  // padding: 10px;
+  background-size: 260px;
+  min-height: 260px;
+  min-width: 260px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .musictitle {
@@ -75,25 +48,25 @@ button {
   color: #D35D6E;
 }
 
-.volume scale trough {
+.music-slider scale trough {
 	all: unset;
 	background-color: #4e4e4e;
 	border-radius: 50px;
-	min-height: 7px;
+	min-height: 5px;
   min-width: 240px;
   margin-bottom: 20px;
 }
 
-.volume scale trough highlight {
+.music-slider scale trough highlight {
 	all: unset;
-	background-color: #c03013;
+	background-color: #ffd5cd;
 	color: #000000;
 	border-radius: 10px;
 }
 
-.volume slider {
+.music-slider slider {
   all: unset;
-  color: #c03013;
+  color: #ffd5cd;
 }
 
 .number_day {
@@ -102,48 +75,25 @@ button {
   color: #D35D6E;
 }
 
-.month {
-  font-weight: bold;
-  // color: #c47eb7;
-}
-
-.weather-icon-side {
-  font-size: 45px;
-  font-family: Iosevka;
-  margin: 5px 30px 5px 30px;
-}
-.weather-stat-side {
-  font-size: 16px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  font-weight: bold;
-  color: #D35D6E;
-}
-
-.temperature-side {
-  font-size: 16px;
-  font-weight: 900;
-  padding-top: 15px;
-  padding-left: 10px;
-  // color: #c47eb7;
-}
-
 .musicart-side {
-  background-size: 10px;
-  min-height: 70px;
-  min-width: 80px;
-  margin: 15px;
+  background-size: 92px;
+  min-height: 90px;
+  min-width: 90px;
+  margin: 15px 5px 15px 15px;
   border-radius: 6px;
 }
 .musicinfo-side {
-  font-size: 18px;
+  font-size: 23px;
   margin-top: 25px;
-  margin-left: 9px;
+  margin-left: 5px;
   font-weight: bold;
+  // margin: 20px;
+  border-radius: 10px;
+  // border: 1px solid white;
   min-width: 40px;
 }
 .musicbtn-side {
-  padding-left: 40px;
+  padding-left: 20px;
   padding-top: 8px;
   padding-bottom: 5px;
 }
@@ -174,6 +124,8 @@ button {
   font-weight: bold;
   color: #90c861;
 }
+
+
 
 
 .sliders-side slider {
@@ -212,7 +164,7 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 220px;
+  min-width: 170px;
   margin-top: 10px;
   margin-left: 20px;
 }
@@ -221,7 +173,7 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 220px;
+  min-width: 170px;
   margin-top: 10px;
   margin-left: 16px;
 }
@@ -230,7 +182,7 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 220px;
+  min-width: 170px;
   margin-top: 10px;
   margin-left: 17px;
 }
@@ -239,9 +191,9 @@ button {
 	background-color: #4e4e4e;
 	border-radius: 50px;
 	min-height: 5px;
-  min-width: 220px;
+  min-width: 170px;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 13px;
 }
 
 .label-battery-side, .label-bright-side, .label-ram-side, .label-vol-side{
@@ -261,7 +213,7 @@ button {
   font-size: 18px;
   color: #90c861;
 }
-.label-vol-side, .pos-side {
+.label-vol-side {
   color: #c47eb7;
 }
 
@@ -296,6 +248,11 @@ button {
 }
 .logout-side{
   color: #90c861;
+}
+
+.calendar_title {
+  margin: 20px 20px 0px 20px;
+  font-size: 16px;
 }
 
 .search-full {
@@ -340,24 +297,32 @@ button {
 .logout-full:hover {
   color: #D35D6E
 }
+.ncmpcpp {
+  font-size: 60px;
+  color: #87b0f9;
+}
+.ncmpcpp:hover {
+  color: #D35D6E;
+}
 
 .pfp {
   background-image: url("./images/pfp.png");
   background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: 50%;
-  min-height: 300px;
-  min-width: 300px;
-  margin: 20px 20px 0px 20px;
-  border-radius: 15px;
+  background-size: 200px;
+  background-position: center;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 80px 20px 0px 65px;
+  border-radius: 50px;
 }
 .pfptxt {
-  margin-top: 30px;
+  margin-top: 100px;
   color: #D35D6E;
   font-size: 36px;
 }
 .subpfptxt {
-  font-size: 24px;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 .l1, .l2, .l3, .l4, .l5, .l6 {
@@ -367,26 +332,20 @@ button {
 .home-dir {
   margin: 10px;
 }
-.home-dir button:hover {
-  color: #ffd5cd;
+.l1:hover, .l3:hover, .l4:hover, .l6:hover {
+  color: #D35D6E;
 }
-.l1 {
+.l1, .l6 {
  color: #84afdb;
 }
-.l2 {
-  color: #90c861;
+.l2, .l5 {
+ color: #ffd5cd;
 }
-.l3 {
+.l3, .l4 {
  color: #c47eb7;
 }
-.l4 {
- color: #D35D6E;
-}
-.l5 {
-   color: #90c861;
-}
-.l6 {
-color: #84afdb;
+.l5:hover, .l2:hover {
+  color: #D35D6E;
 }
 
 .screenshot-icon {
@@ -395,31 +354,17 @@ color: #84afdb;
   margin-right: 5px;
   font-family: Iosevka;
 }
-.screenshot-icon:hover{
-  color: #D35D6E
-}
 
 .vpn-icon {
   font-size: 60px;
   margin-right: 5px;
 }
 .vpn-icon:hover {
-  color: #D35D6E
+  color: #ffd5cd;
 }
-.incognito-icon {
-  font-size: 60px;
-  margin-right: 10px;
-  color: #c47eb7;
+.disturb-icon {
+   font-size: 60px;
 }
-.incognito-icon:hover{
-  color: #D35D6E
-}
-
-.ncmpcpp-icon {
-  font-size: 60px;
-  margin-right: 10px;
-  color: #c47eb7;
-}
-.ncmpcpp-icon:hover{
-  color: #D35D6E
+.disturb-icon:hover {
+  color: #ffd5cd;
 }

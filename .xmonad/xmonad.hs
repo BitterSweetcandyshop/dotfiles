@@ -91,9 +91,9 @@ addEWMHFullscreen   = do
 clipboardy :: MonadIO m => m () -- Don't question it 
 clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme ~/.config/rofi/config.rasi"
 
-centerlaunch = spawn "exec ~/bin/eww open-many blur_full vpn-icon profile incognito-icon power_full reboot_full lock_full suspend_full logout_full player_mini screenshot ncmpcpp-icon"
+centerlaunch = spawn "bash ~/.scripts/misc/center.sh"
 sidebarlaunch = spawn "exec ~/bin/eww open-many player time_side sys_side sliders_side"
-ewwclose = spawn "exec ~/bin/eww close-all"
+ewwclose = spawn "bash ~/.scripts/misc/close.sh"
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
 maimsave = spawn "maim -s ~/Documents/flameshot/$(date +%s).png && notify-send \"Screenshot\" \"Saved to Files\" -i flameshot"
 rofi_launcher = spawn "rofi -show drun"
@@ -331,7 +331,7 @@ myLogHook = return ()
 
 myStartupHook = do
   spawnOnce "python ~/.scripts/music/art_updater.py"
-  spawnOnce "exec eww daemon"
+  spawnOnce "exec ~/bin/eww daemon"
   spawnOnce "picom -b"
   spawnOnce "greenclip daemon"
   spawnOnce "dunst"

@@ -1,8 +1,5 @@
-#!/bin/bash
-#mpc | head -n2 |tail -n1 | awk '{print $4}' | head -c3 | tail -c2
-SOURCE=$(cat ~/.scripts/music/source.txt) | tr -d '\n'
-POSITION=$(playerctl -p "$SOURCE" position | sed 's/\([a-zA-Z: \t]\)//g' | cut -d . -f 1)
-DURATION=$(python ~/.scripts/music/playerctl_out.py metadata length)
+#!/bin/sh
+POSITION=$(playerctl -p mpd position | sed 's/\([a-zA-Z: \t]\)//g' | cut -d . -f 1)
+DURATION=$(playerctl metadata mpris:length)
 DURSEC=$((DURATION / 1000000))
-echo $POSITION
-echo "scale=2; $POSITION/$DURSEC * 100" | bc #| cut -d . -f 1
+echo "scale=2; $POSITION/$DURSEC * 100" | bc | cut -d . -f 1

@@ -1,0 +1,20 @@
+Browser,firefox,firefox
+File Manager,thunar,org.xfce.thunar
+^sep()
+
+Launch Terminal,alacritty --hold,utilities-terminal
+^sep()
+
+Music,^checkout(pl)
+
+Lock,$HOME/bin/lock.sh
+
+^tag(pl)
+Spotify,spotify,Spotify
+Tidal,tidal-hifi,tidal-hifi
+Player,^checkout(set_player)
+
+^tag(set_player)
+Mpd,echo mpd > ~/.scripts/music/source.txt
+Tidal,echo tidal-hifi > ~/.scripts/music/source.txt
+Spotify,echo spotify > ~/.scripts/music/source.txt

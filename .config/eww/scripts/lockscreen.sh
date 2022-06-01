@@ -1,6 +1,4 @@
 #!/bin/bash
-mpc pause &
-eww close-all
-playerctl -a pause &
+playerctl pause &
 amixer set Master mute &
-betterlockscreen -l &
+betterlockscreen -l

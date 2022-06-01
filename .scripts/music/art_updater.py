@@ -66,4 +66,4 @@ while True:
                 continue
     
     # increase this if your cpu starts to hate you
-    sleep(3)
+    sleep(1)

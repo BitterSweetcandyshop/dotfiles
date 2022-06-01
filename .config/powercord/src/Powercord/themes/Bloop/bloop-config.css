@@ -2,6 +2,61 @@
 @import "https://leeprky.github.io/themes/Bloop/imports.css";
 @import "https://raw.githubusercontent.com/catppuccin/palette/main/Catppuccin.css";
 
+:root {
+	--ctp-mocha-rosewater: #f5e0dc;
+	--ctp-mocha-rosewater-rgb: rgba(245, 224, 220, 0.8);
+	--ctp-mocha-flamingo: #f2cdcd;
+	--ctp-mocha-flamingo-rgb: rgba(242, 205, 205, 0.5);
+	--ctp-mocha-pink: #f5c2e7;
+	--ctp-mocha-pink-rgb: rgba(245, 194, 231, 0.5);
+	--ctp-mocha-mauve: #cba6f7;
+	--ctp-mocha-mauve-rgb: rgba(203, 166, 247, 0.5);
+	--ctp-mocha-red: #f38ba8;
+	--ctp-mocha-red-rgb: rgba(243, 139, 168, 0.5);
+	--ctp-mocha-maroon: #eba0ac;
+	--ctp-mocha-maroon-rgb: rgba(235, 160, 172, 0.5);
+	--ctp-mocha-peach: #fab387;
+	--ctp-mocha-peach-rgb: rgba(250, 179, 135, 0.5);
+	--ctp-mocha-yellow: #f9e2af;
+	--ctp-mocha-yellow-rgb: rgba(249, 226, 175, 0.5);
+	--ctp-mocha-green: #a6e3a1;
+	--ctp-mocha-green-rgb: rgba(166, 227, 161, 0.5);
+	--ctp-mocha-teal: #94e2d5;
+	--ctp-mocha-teal-rgb: rgba(148, 226, 213, 0.5);
+	--ctp-mocha-sky: #89dceb;
+	--ctp-mocha-sky-rgb: rgba(137, 220, 235, 0.5);
+	--ctp-mocha-sapphire: #74c7ec;
+	--ctp-mocha-sapphire-rgb: rgba(116, 199, 236, 0.5);
+	--ctp-mocha-blue: #87b0f9;
+	--ctp-mocha-blue-rgb: rgba(135, 176, 249, 0.5);
+	--ctp-mocha-lavender: #b4befe;
+	--ctp-mocha-lavender-rgb: rgba(180, 190, 254, 0.5);
+	--ctp-mocha-text: #c6d0f5;
+	--ctp-mocha-text-rgb: rgba(198, 208, 245, 0.5);
+	--ctp-mocha-subtext1: #b3bcdf;
+	--ctp-mocha-subtext1-rgb: rgba(179, 188, 223, 0.5);
+	--ctp-mocha-subtext0: #a1a8c9;
+	--ctp-mocha-subtext0-rgb: rgba(161, 168, 201, 0.5);
+	--ctp-mocha-overlay2: #8e95b3;
+	--ctp-mocha-overlay2-rgb: rgba(142, 149, 179, 0.5);
+	--ctp-mocha-overlay1: #7b819d;
+	--ctp-mocha-overlay1-rgb: rgba(123, 129, 157, 0.5);
+	--ctp-mocha-overlay0: #696d86;
+	--ctp-mocha-overlay0-rgb: rgba(105, 109, 134, 0.5);
+	--ctp-mocha-surface2: #565970;
+	--ctp-mocha-surface2-rgb: rgba(86, 89, 112, 0.5);
+	--ctp-mocha-surface1: #43465a;
+	--ctp-mocha-surface1-rgb: rgba(67, 70, 90, 0.5);
+	--ctp-mocha-surface0: #313244;
+	--ctp-mocha-surface0-rgb: rgba(49, 50, 68, 0.5);
+	--ctp-mocha-base: #1e1e2e;
+	--ctp-mocha-base-rgb: rgba(30, 30, 46, 0.5);
+	--ctp-mocha-mantle: #181825;
+	--ctp-mocha-mantle-rgb: rgba(24, 24, 37, 0.5);
+	--ctp-mocha-crust: #11111b;
+	--ctp-mocha-crust-rgb: rgba(17, 17, 27, 0.5);
+}
+
 /* Glasscord */
 .theme-dark {
   --glasscord-win-blur: blurbehind;
@@ -12,53 +67,23 @@
   --background-floating: var(--glasscord-floating); 
   
   /*--glasscord-primary: #0000007e !important;*/
-  --glasscord-primary: #1e1d2f63 !important;
-  --glasscord-secondary: var(--glasscord-primary) !important;
-  --glasscord-secondary-alt: #18191bcc !important;
+  --glasscord-primary: var(--ctp-mocha-mantle-rgb) !important;
+  --glasscord-secondary: var(--ctp-mocha-crust-rgb) !important;
+  --glasscord-secondary-alt:: var(--ctp-mocha-crust) !important;
   --glasscord-accent: var(--alt-color2) !important;
   --glasscord-tertiary: #302D41 !important;
-  --glasscord-floating: #18191c !important;
+  --glasscord-floating: pink !important;
   --glasscord-backdrop: 0.55 !important;
 }
 :root {--im-aware: none !important} /* Turn To "block to enable */
-
-/* Catpuccin */
-:root {
-  /* Colors */
-  --color0: #6E6C7E !important;
-  --color1: #F28FAD !important;
-  --color2: #ABE9B3 !important;
-  --color3: #FAE3B0 !important;
-  --color4: #96CDFB !important;
-  --color5: #F5C2E7 !important;
-  --color6: #89DCEB !important;
-  --color7: #C3BAC6 !important;
-  --color8: #988BA2 !important;
-  --color9: #F28FAD !important;
-  --color10: #ABE9B3 !important;
-  --color11: #FAE3B0 !important;
-  --color12: #96CDFB !important;
-  --color13: #F5C2E7 !important;
-  --color14: #89DCEB !important;
-  --color15: #D9E0EE !important;
-}
 
 .theme-dark {
 
     /* Main Colours - Try Keep These The Same */
     --main-colour: rgba(87, 202, 154); /* RGB ONLY */
-    --main-colour2: var(--color4); /* HEX ONLY */
+    --main-colour2: var(--ctp-mocha-subtext1-rgb); /* HEX ONLY */
     --main-colour3: 155; /* HSL ONLY */
-    --alt-color: var(--color1);
-  
-    /* Green Colours */
-    --green-color: var(--alt-color2); /* HEX ONLY */
-    --green-color2: var(--alt-color); /* RGB ONLY */
-    --green-bar-on: rgba(var(--alt-color), 0.3); /* RGBA ONLY */
-    --green-bar-bg: var(--green-color); /* RGB ONLY */
-    --green-slider-on: var(--green-color); /* RGB ONLY */
-    --green-slider-off: rgba(var(--alt-color), 0.4); /* RGBA ONLY */
-    --green-slider-dot: #fff;
+    --alt-color: var(--ctp-mocha-text);
   
     /* Status/Other Things Colours */
     --wordmark-text: "";
@@ -76,46 +101,37 @@
     --gaps: 0px;
 
     --rs-avatar-shape: 22%;
-    --rs-online-color: #4cee8f;  /* Colour for online status */
-    --rs-idle-color: #f1c73d;  /* Colour for idle status */
-    --rs-dnd-color: #df4460;  /* Colour for dnd status */
-    --rs-offline-color: #636b75;  /* Colour for offline status */
-    --rs-streaming-color: #643da7;  /* Colour for streaming status */
+    --rs-online-color: var(--ctp-mocha-green);  /* Colour for online status */
+    --rs-idle-color: var(--ctp-mocha-yellow);  /* Colour for idle status */
+    --rs-dnd-color: var(--ctp-mocha-red);  /* Colour for dnd status */
+    --rs-offline-color: var(--ctp-mocha-maroon);  /* Colour for offline status */
+    --rs-streaming-color: var(--ctp-mocha-mauve);  /* Colour for streaming status */
     --rs-invisible-color: #747f8d;  /* Colour for invisible status - Note: this will only show for your own invisibility */
   
-    --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
+    --badge-size: 10px; /*discord defualt = 18px, theme defualt = 22px;*/
     --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
     --badges-everywhere-size: 15px; /*default = 15px*/
 
     /* Header Colours */
-    --headers: var(--color3);
-    --headers-secondary: var(--color5);
+    --headers: var(--ctp-mocha-subtext0);
+    --headers-secondary: var(--ctp-mocha-text);
   
-    --chatbox-colour: var(--background-secondary);
-    --mentioned: var(--color5);
-    --mentioned-hover: rgba(var(--alt-color), 0.2);
+    --chatbox-colour: var(--ctp-mocha-blue);
+    --mentioned: var(--ctp-mocha-blue);
+    --mentioned-hover: var(--ctp-mocha-blue);
   
     /* Text Colours */
-    --namesusernames: var(--color4);
-    --text: var(--color15); /*dcddde*/
-    --text-positive1: var(--green-color);
+    --namesusernames: var(--ctp-mocha-subtext0);
+    --text: var(--ctp-mocha-text);
+    --text-positive1: var(--ctp-mocha-green-rgb);
     --muted: #70757e;
-    --links: var(--color1);
+    --links: var(--ctp-mocha-lavender);
     
     /* Interative Buttons */
     --button-interactive: #bebebe;
     --button-interactive-hover: var(--main-colour2);
     --button-interactive-active: #bebebe;
     --button-interactive-muted: #5b5e61;
-  
-    /* Backgrounds */
-    --main-background: #1f2024;
-    --main-background-alternative: #26282c;
-    --secondary-background: #18191b;
-    --secondary-background-alternative: #141618;
-    --tertiary: #131416;
-    --accent: var(--alt-color2);
-    --floating: #18191c;
   
     /* Hovering Colours */
     --main-hover: rgba(var(--alt-color), 0.2);
@@ -124,7 +140,10 @@
     --main-hover-accent: rgba(var(--alt-color), 0.1); 
   
     /* Infos */
-    --info-warning: var(--alt-color2);--help-warning: var(--alt-color2); --help-info: var(--alt-color2);--radio-group-dot: var(--alt-color);
+    --info-warning: var(--alt-color2);
+    --help-warning: var(--alt-color2); 
+    --help-info: var(--alt-color2);
+    --radio-group-dot: var(--alt-color);
   
     /* Drop Shadow */
     --shadow-stroke: 0 0 0 1px rgba(4,4,5,0.15);
@@ -134,12 +153,6 @@
   
     /* Scollbars */
     --scrollbars: none; /* Flex To See Scrollbars / None For None */
-    --scrollbar-small: #413838;
-    --scrollbar-small-track: transparent;
-    --scrollbar-large-thumb: #413838;
-    --scrollbar-large-track: #5d4e4e;
-    --scrollbar-small-scrollbar-color: #413838;
-    --scrollbar-small-scrollbar-color-track: #5d4e4e;
   
     /* Button Gradients */
     --default-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--special-gradient: 315deg, rgba(var(--alt-color), 0.1) 0%, #c987b8 74%;--red-gradient: 315deg, #AA3738 0%, #F04747 74%;--red-hsl: hsl(359, 63%, 53%);--yellow-gradient: 315deg, #c29b1b 0%, #ffa640 74%;--yellow-hsl: hsl(46, 72%, 52%);--green-gradient: 315deg, #507a73 0%, #4b7c72  74%;--grey-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--white-gradient: 315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.342) 74%;
@@ -177,13 +190,13 @@ body{
 
  /* Glasscord Secondary */
 .message-2CShn3, .container-1IyjjY, .perks-26lTSw.container-18GwIk.theme-dark .root-g14mjS, .chatHeaderBar-2fUORh, .container-3i3IzO, .theme-dark .root-g14mjS, .circleIconButton-1QV--U, .powercord-quickcss:not(.popped-out), .videoWrapper-1_H3B3, .theme-dark .uploadModal-2ie9O_, .replyBar-1oi75v, .threadSuggestionBar-3ExSyc, .attachedBars-2BCP3l, .optionContainer-yOpaLq, .upsellContainer-L9xv7w, .value-kR4BVK, .wrapper-24fR1R, .messageContainer-3a6gLR, .icon-2DGsye, .welcomeChannel-1rFrIO, .previewContainer-1SS3uO, .settingsFormFieldWrapper-U99c9i, .featureCard-1RR4Tl, .cardFolder-3H4uH4, .connectionOptionsWrapper-1ipqUo, .powercord-toast .contents .inner, .emptyCard-KDifrB, .channelName-3w2Y3c, .searchResultsWrap-5RVOkx, .theme-light .userSettingsVoice-1_dzjw .previewOverlay-2reuWf, .theme-dark .userSettingsVoice-1_dzjw .previewOverlay-2reuWf, .theme-dark .codeRedemptionRedirect-3SBiCp, .wrapper-2vIMkT, .connectionHeader-2rV1ze, .accountList-305sx3, .total-members-preview, .item-2idW98, .primary-38Hs-h:hover:not(.disabled-184-il), .secondary-2bzKEX, .content-3spvdd, .expandedFolderBackground-1cujaW, .theme-light .container-S9SaVf, .theme-dark .container-S9SaVf, .actionButton-3-B2x-, .wrapper-2RrXDg, .scrollableContainer-15eg7h, .mulitplePlaceholderUsername-2T3DCI, .placeholderAvatar-1qAcRZ, .placeholderUsername-3iQi_D
-{ background-color: var(--glasscord-secondary) !important}
+{ background-color: var(--ctp-mocha-mantle-rgb) !important}
 .container-2rzKKA, .theme-dark .codeRedemptionRedirect-3SBiCp,  .powercord-toast .buttons, .powercord-toast .contents .inner,.powercord-toast .contents,.powercord-toast .header
 {border: 0px;}
 
 /* Secondary Alt */
 .attachment-1PZZB2, .theme-dark .contentWarningPopout-WKdbDG, .theme-dark .footer-31IekZ, .audienceVoiceUserIconContainer-1aQGLF, .privacyContainer-JsAijK, .perks-26lTSw, .container-2rzKKA, .theme-dark .message-G6O-Wv, .reaction-2A2y9y, .theme-dark .card-2TuZPZ, .theme-dark .iconMask-2fMR98, .theme-light .card-2TuZPZ,[class="container-20TyK0 elevationHigh-28Pty4"],.upsellFooter-ZYsio_, .descriptionBox-1EKQKL, .perksList-1vtwXn, .theme-dark .iconWrapper-2_MXbk, .upsellFooter-1H_OCF, .container-3EtAkD, .theme-dark .tierHeaderLocked-30MLlO, .editButton-2SLR4j, .settingsFormItem-25zW3t, .enableContainer-1J91Aq, .card-3_CqkU, .iconMask-30Tvqs, .container-2w0lh0, .checklistContainer-mFJZEJ, .item-4m-12I[aria-checked=false],.cardContent-1-5hym, .popout-1KHNAq, .table-17_dGF, .lookFilled-1GseHa.select-1Ia3hD, .wrapper-1NNaWG, .inspector-DFKXwB, .contentWrapper-3vHNP2, .powercord-toast, .powercord-toast .buttons, .powercord-toast .contents, .theme-dark .gemIndicatorContainer-PqApbX, .connectionHeader-2rV1ze, .input-2z42oC, .powercord-toast .header, .searchResult-O9NDji, .theme-light .default-1Tkeeg, .theme-dark .default-1Tkeeg, .powercord-entities-manage-tabs, .developerPortalCtaWrapper-2XNafh, .previewMessage-2uxBrA, .fieldList-in8WkP, .background-3d_SjE, .accountBtn-1YkMgV .accountBtnInner-3XK70s, .secondary-2bzKEX:hover:not(.disabled-184-il), .messageContainer-3VTXBC, .messages-23can0, .markup-eYLPri code, .section-3G9aLW, .role-23oyrw, .embedFull-1HGV2S, .folder-1hbNCn,  .childWrapper-1j_1ub, .theme-dark .feature-2IUcBI, .theme-light .feature-2IUcBI, .messageGroupWrapper-1jf_7C
- { background-color: var(--glasscord-secondary-alt) !important}
+ { background-color: var(--ctp-mocha-crust-rgb-alt) !important}
 
  /* Transparent */
  .container-u0iLTp, .wrapper-1gVUIN, .callContainer-BGIngG, .container-cH6QoY,  .threadSidebar-1o3BTy, .bg-1QIAus, .scroller-1TOeMq, .theme-dark .pageWrapper-2PwDoS, .theme-light .pageWrapper-2PwDoS,.loadingPopout-1feYe_, .powercord-quickcss .CodeMirror-gutters, .bodyInnerWrapper-2bQs1k, .header-1iEhSH, .tabBar-3DfKkN.top-K_jibn,  .titleContainer-3fPic2, .scroller-3_YDR2, .paymentHistory-2Zf4ZE, .contentRegionScroller-2_GT_N, .standardSidebarView-E9Pc3j, [class="layers-OrUESM layers-1YQhyW"], .layer-86YKbF, .contentRegion-3HkfJJ, .sidebarRegionScroller-FXiQOh, .channelHeader-DFRX8q, .app-2CXKsg, .wrapper-15CKyy, .root-22AK9z, .wrapper-1gVUIN.minimum-fXpVNc, .scroller-29cQFV, .applicationStore-2nk7Lo, .header-2EadGG, .scroller-2XLwLg, .stageSection-3mAD8V, .wrapper-1_HaEi, .scroller-3X7KbA, .members-3WRCEx, .members-3WRCEx>div, .theme-light .form-3gdLxP:before, .theme-dark .form-3gdLxP:before, .container-1NXEtd, .sidebar-1tnWFu, .panels-3wFtMD, .chat-2ZfjoI, .container-ZMc96U.themed-Hp1KC_, .wrapper-22ayhK, .theme-light .container-2cd8Mz, .theme-dark .container-2cd8Mz, .peopleColumn-1wMU14, .theme-light .root-g14mjS ,.theme-dark .root-g14mjS, .theme-dark .contentWrapper-3oy4Xo, .theme-light .contentWrapper-3oy4Xo, .homeWrapper-L4ors0, .container-1oAagU, .nowPlayingColumn-1eCBCN, .sidebar-1tnWFu,.base-2jDfDU, .privateChannels-oVe7HL, .scroller-WSmht3
@@ -204,7 +217,7 @@ body{
 .theme-dark .searchAnswer-23w-CH, .theme-dark .searchFilter-2UfsDk
 { background-color: var(--alt-color2) !important}
 .authedApp-1tw-eT .marginBottom20-315RVT .headerInfo-9C2zHz
-{ background-color: var(--glasscord-secondary-alt); padding: 15px; border-radius: 6px; margin-left: -21px; margin-top: -21px; margin-right: -136px;}
+{ background-color: var(--ctp-mocha-crust-rgb-alt); padding: 15px; border-radius: 6px; margin-left: -21px; margin-top: -21px; margin-right: -136px;}
 
 .item-2idW98[aria-checked=true], .categoryItemDefaultCategorySelected-2YeRUu, .categoryItemDefaultCategorySelected-2YeRUu:hover, .option-2eIyOn.focused-ODgjnC, .option-2eIyOn:focus, .option-2eIyOn:hover, .theme-dark .tierHeaderUnlocked-1OpOLf {
   background-color: var(--green-color) !important;
@@ -220,7 +233,7 @@ body{
   margin-top: 45px;
 }
 .sidebar-1tnWFu, .container-1NXEtd {
-  background-color: var(--glasscord-secondary) !;
+  background-color: var(--ctp-mocha-crust-rgb) !;
 }
 .container-2o3qEW {
   background-color: transparent !important;
@@ -231,7 +244,7 @@ body{
 }
 
 .sidebar-1tnWFu, .container-1NXEtd {
-  background-color: var(--glasscord-secondary) !;
+  background-color: var(--ctp-mocha-crust-rgb) !;
 }
 .container-2o3qEW {
   background-color: transparent !important;
@@ -268,7 +281,7 @@ Below is my code and snippets
 
 /* reaction tooltip */
 .reactionTooltipContent-bJy0c2 {
-  background-color: var(--color0) !important;
+  background-color: var(--ctp-mocha-mantle) !important;
 }
 
 /* timeless */
@@ -335,7 +348,7 @@ Below is my code and snippets
 
 /* change server folder background */
 .expandedFolderBackground-1kSAf6 {
-  background-color: var(--glasscord-secondary-alt) !important;
+  background-color: var(--ctp-mocha-crust-rgb-alt) !important;
 }
 
 /* pronounDB */
@@ -346,7 +359,7 @@ Below is my code and snippets
 /* status picker hehehe */
 [id="status-picker"] {
   width: 100%;
-  background: var(--background-primary) !important;
+  background: var(--ctp-mocha-base-rgb) !important;
   left: 55px;
   bottom: -60px;
 }
@@ -443,6 +456,15 @@ Below is my code and snippets
 .customStatusItem-1qQzss {
   grid-template-columns: unset;
 }
+.container-YkUktl {
+  height: 45px;
+  background-color: var(--glasscord-primary) !important;
+}
+.avatarWrapper-1B9FTW {
+  bottom: 80px;
+  left: 30px;
+  transform: scale(1.4);
+}
 
 
 /* Right side user panel */
@@ -451,34 +473,13 @@ Below is my code and snippets
   height: 100%;
   left: 3px;
 }
-.container-YkUktl {
-  right: 15px !important;
-  height: 45px;
-  background-color: var(--glasscord-primary) !important;
-}
-.container-1zzFcN {
-  position: fixed;
-  right: 15px !important;
-  bottom: 60px;
-  background-color: var(--glasscord-primary) !important;
-  
-}
 .labelWrapper-1HofQ- .statusWithPopout-1MDqs1, .ping-2IpLcU > path{
   color: var(--headers-secondary) !important;
-}
-.sidebar-1tnWFu {
-  height: 108%;
-  width: 15%;
 }
 .unreadBottom-3Ojk6R.unread-XRkyaQ{
   bottom: 8%;
   left: -1px;
   width: 96%;
-}
-.avatarWrapper-1B9FTW {
-  bottom: 20px;
-  left: 30px;
-  transform: scale(1.4);
 }
 .messageListItem-ZZ7v6g {
   max-width: 98.5%;
@@ -490,7 +491,7 @@ Below is my code and snippets
   background-color: transparent !important;
 }
 .root-u9h3Ui.tile-2TcwiO {
-  background-color: var(--glasscord-secondary);
+  background-color: var(--ctp-mocha-crust-rgb);
 }
 .tile-2Dr6M1, .content-3u3YYB {
   background-color: transparent !important;
@@ -512,7 +513,7 @@ Below is my code and snippets
   display: none;
 }
 .channelTextArea-1FufC0.channelTextArea-1VQBuV, .scrollableContainer-15eg7h.webkit-QgSAqd {
-  background-color: var(--glasscord-secondary) !important;
+  background-color: var(--ctp-mocha-crust-rgb) !important;
 }
 [aria-label="Send a gift"], [aria-label="Open GIF picker"], [aria-label="Open sticker picker"] {
   display: none;
@@ -523,7 +524,7 @@ Below is my code and snippets
 
 /* embed stuff */
 .embedWrapper-1MtID {
-  background-color: var(--glasscord-secondary-alt) !important;
+  background-color: var(--ctp-mocha-crust-rgb-alt) !important;
 }
 
 /* fuck that replied spine */
@@ -1015,7 +1016,7 @@ img[class^="avatar"] {
   padding: 0;
 }
 .root-8LYsGj .userInfoSectionHeader-2mYYun {
-  background-color: var(--glasscord-secondary-alt);
+  background-color: var(--ctp-mocha-crust-rgb-alt);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   margin-bottom: 0;
@@ -1025,7 +1026,7 @@ img[class^="avatar"] {
   font-weight: 600;
 }
 .root-8LYsGj .markup-eYLPri, .root-8LYsGj .note-3M15gE {
-  background-color: var(--glasscord-secondary);
+  background-color: var(--ctp-mocha-crust-rgb);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   margin-left: 0;

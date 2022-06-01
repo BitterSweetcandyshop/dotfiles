@@ -1,8 +1,8 @@
 #!/bin/sh
 
-STATUS=$(mpc | awk '{print $1}' | head -n2 | tail -n1)
+STATUS=`playerctl status -p $(cat ~/.scripts/music/source.txt)`
 
-    if [ "$STATUS" = "[playing]" ]; then
+    if [ "$STATUS" = "Playing" ]; then
         STATUS=""
     else
         STATUS=""

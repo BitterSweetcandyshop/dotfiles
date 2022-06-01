@@ -1,30 +1,41 @@
 # BitterSweet's Ratppuccin Dotfiles
-Transparent Catppuccin, Rats (no not the software, the fluffly rodent)
+> funni sarcasm and cringe ahead
 
-Also the progress par is pacman for ncmpcpp
+Transparent Catppuccin, Rats (no not the sussy baka software, the fluffy rodent)
+~~give me a star bitch~~ Consider leaving a star ~~judgy prick~~ <3!
 
-## Dependencies
-> If you know what you're doing you know you don't actually need all of these, or already have them.
+## Things I Use
+> If you know what you're doing you know you don't actually most of these, or already have them.
 
-| Task         | Tools     |
+| Task              | Suspect     |
 |-------------------|-------------------------------------------------|
-| Music/Audio       | Playerctl, MPD, Ncmpcpp, Spotify, tidal-hifi (wip), glava
-| Widgets (wip)     | Conky, Polybar, Eww  
-| Files (wip)       | Ranger(snow), Nemo(dark) 
-| Launcher          | Rofi
-| Notifcations      | Dunst
-| Mods (wip)        | Glasscord (tidal-hifi), Powercord
+| Music/Audio       | Playerctl, MPD, Ncspot, Ncmpcpp, Spotify, tidal-hifi, glava, cava
+| Widgets/Launch    | Conky, Polybar, Eww (wip), Rofi
+| Files (wip)       | Ranger(snow), Nemo(dark)
+| Notifcations      | Dunst(catppuccin, wip)
+| Mods              | Glasscord (tidal-hifi, wip), Powercord, glassit(vsc), catppuccin(vsc), Open.asar
 | Compositor        | Picom
-| Terminal          | Alacritty
-| Icons             | Candy-icons
-| Fonts             | PressStart2P-Regular, JetBrains Mono, Iosevka Nerd
+| Clipboard         | Greenclip
+| Terminal          | Alacritty, Bash
+| Web               | DiscordCanary, Firefox
+| Icons             | Candy-icons, Adiwatta
+| Fonts             | PressStart2P-Regular, JetBrains Mono, Iosevka Nerd, (probs others idfk)
 | Wallpapers        | [My Wallpaper Dump + Unixporn Dump](https://github.com/BitterSweetcandyshop/Wallpapers)
 | Startpage         | [Live](https://bittersweetcandyshop.github.io/startpage/), [Source](https://github.com/BitterSweetcandyshop/startpage)
-
+| Imposter          | Red (sus)
 ## Note
-> Almost everything relies on the .scripts folder, I made sure to do my best to make it usable by anyone
+> Almost everything relies on the .scripts folder, I made sure to do my best to make it usable by anyone though.
+
+## Thanks
+- axarva (eww), base which I started from
+- Leeprky and ~Bullcum~~ Bulldog's Theme (discord), Used Bloop base and older version of Bulldog's user modal/popout
+- mommy unixporn (everything), ~~for giving me luv and cuddles~~ wallpapers
+- catppuccin, for color scheme
+- you!, for being a ~~waste of space~~ kind enough to check out my stuff ~~you bitch~~ <3!
 
 ## Demos
+> setup is different now, message me or wait for updated demos.
+
 ### Empty
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/full_empty.png?raw=true)
 ### Rofi
@@ -32,3 +43,6 @@ Also the progress par is pacman for ncmpcpp
 
 
 ![](https://media.discordapp.net/attachments/635625917623828520/978866060348522546/1652765967.png)
+
+~~fuck you~~ have a good day ~~twat~~<3
+> I have a serious one that explains everything (readme2.md)
