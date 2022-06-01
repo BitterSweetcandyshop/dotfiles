@@ -72,7 +72,7 @@
   --glasscord-secondary-alt:: var(--ctp-mocha-crust) !important;
   --glasscord-accent: var(--alt-color2) !important;
   --glasscord-tertiary: #302D41 !important;
-  --glasscord-floating: pink !important;
+  --glasscord-floating: var(--ctp-mocha-base-rgb) !important;
   --glasscord-backdrop: 0.55 !important;
 }
 :root {--im-aware: none !important} /* Turn To "block to enable */
@@ -318,7 +318,6 @@ Below is my code and snippets
   background-color: var(--glasscord-floating) !important;
 }
 [aria-label="Thread header"]{
-  color: pink;
   transform: translateX(240px);
   width: 100%;
 }
