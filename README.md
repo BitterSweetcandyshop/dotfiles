@@ -34,15 +34,17 @@ Transparent Catppuccin, Rats (no not the sussy baka software, the fluffy rodent)
 - you!, for being a ~~waste of space~~ kind enough to check out my stuff ~~you bitch~~ <3!
 
 ## Demos
-> setup is different now, message me or wait for updated demos.
+> There is nothign else below here, so yea
 
 ### Empty
-![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/full_empty.png?raw=true)
-### Rofi
-> also used for clipboardy
+![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/normal.png?raw=true)
+### Active
+![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rubber_room.png?raw=true)
+### Eww Main
+![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/eww_main.png?raw=true)
+### Music Players
+![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/music_players.png?raw=true)
 
-
-![](https://media.discordapp.net/attachments/635625917623828520/978866060348522546/1652765967.png)
 
 ~~fuck you~~ have a good day ~~twat~~<3
-> I have a serious one that explains everything (readme2.md)
+> more details in readme2.md
