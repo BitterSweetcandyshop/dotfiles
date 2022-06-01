@@ -28,7 +28,7 @@ Transparent Catppuccin, Rats (no not the sussy baka software, the fluffy rodent)
 
 ## Thanks
 - axarva (eww), base which I started from
-- Leeprky and ~Bullcum~~ Bulldog's Theme (discord), Used Bloop base and older version of Bulldog's user modal/popout
+- Leeprky and ~~Bullcum~~ Bulldog's Theme (discord), Used Bloop base and older version of Bulldog's user modal/popout
 - mommy unixporn (everything), ~~for giving me luv and cuddles~~ wallpapers
 - catppuccin, for color scheme
 - you!, for being a ~~waste of space~~ kind enough to check out my stuff ~~you bitch~~ <3!
