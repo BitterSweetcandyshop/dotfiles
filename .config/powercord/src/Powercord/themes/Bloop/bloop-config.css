@@ -72,7 +72,7 @@
   --glasscord-secondary-alt:: var(--ctp-mocha-crust) !important;
   --glasscord-accent: var(--alt-color2) !important;
   --glasscord-tertiary: #302D41 !important;
-  --glasscord-floating: var(--ctp-mocha-base-rgb) !important;
+  --glasscord-floating: var(--ctp-mocha-base) !important;
   --glasscord-backdrop: 0.55 !important;
 }
 :root {--im-aware: none !important} /* Turn To "block to enable */
@@ -98,15 +98,13 @@
     --general-glow-strong: 0 0 5px;
     --general-glow-weak: 0 0 1px;
 
-    --gaps: 0px;
-
     --rs-avatar-shape: 22%;
     --rs-online-color: var(--ctp-mocha-green);  /* Colour for online status */
     --rs-idle-color: var(--ctp-mocha-yellow);  /* Colour for idle status */
     --rs-dnd-color: var(--ctp-mocha-red);  /* Colour for dnd status */
     --rs-offline-color: var(--ctp-mocha-maroon);  /* Colour for offline status */
     --rs-streaming-color: var(--ctp-mocha-mauve);  /* Colour for streaming status */
-    --rs-invisible-color: #747f8d;  /* Colour for invisible status - Note: this will only show for your own invisibility */
+    --rs-invisible-color: var(--ctp-mocha-overlay1);  /* Colour for invisible status - Note: this will only show for your own invisibility */
   
     --badge-size: 10px; /*discord defualt = 18px, theme defualt = 22px;*/
     --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
@@ -735,7 +733,7 @@ Below is my code and snippets
   margin: 0 10px 10px 10px;
 }
 .userPopout-2j1gM4 .bodyTitle-2Az3VQ {
-  background-color: var(--background-primary);
+  background-color: var(--ctp-mocha-mantle);
   padding: 8px 10px 8px 10px;
   margin: 0;
   border-top-left-radius: 8px;
@@ -1086,17 +1084,22 @@ img[class^="avatar"] {
 
 /* custom status */
 .root-8LYsGj .customStatusActivity-WKWGD- {
-  position: relative !important;
-  padding: 8px 8px;
-  left: 30px;
-  top: 60px;
-  width: 164px;
-  max-height: 90px;
-  background-color: rgba(0, 0, 0, .5);
-  border-radius: 8px;
+  position: fixed;
+  width: 130px;
+  max-height: 185px;
+  bottom: 110px;
+  left: 40px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
   text-align: center;
   overflow-wrap: break-word;
   overflow-y: scroll;
+}
+.customStatusText-_4TbWr {
+  color: white !important;
+  background-color: pink;
+  display: unset !important;
 }
 .root-8LYsGj .customStatusActivity-WKWGD-::-webkit-scrollbar {
   display: none;
@@ -1105,6 +1108,7 @@ img[class^="avatar"] {
   display: block;
   margin-right: auto !important;
   margin-left: auto !important;
+  margin-bottom: 5px;
   width: 50px;
   height: 50px;
 }

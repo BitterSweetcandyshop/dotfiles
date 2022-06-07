@@ -1,0 +1,39 @@
+(defwidget top_torrents [] 
+    (box :orientation "v"
+        (button :halign "center" :tooltip "${tf1n}  (${tf1r})" :class "l1" :onclick "xdg-open ${tf1i}" {tf1s})
+        (button :halign "center" :tooltip "${tf2n}  (${tf2r})" :class "l2" :onclick "xdg-open ${tf2i}" {tf2s})
+        (button :halign "center" :tooltip "${tf3n}  (${tf3r})" :class "l3" :onclick "xdg-open ${tf3i}" {tf3s})
+        (button :halign "center" :tooltip "${tf4n}  (${tf4r})" :class "l4" :onclick "xdg-open ${tf4i}" {tf4s})
+        (button :halign "center" :tooltip "${tf5n}  (${tf5r})" :class "l5" :onclick "xdg-open ${tf5i}" {tf5s})
+    )
+)
+
+
+;; TF... hehehhehe bewbies
+;; yes I could have used a for loop on the actual widget
+;; and make the format json to read it all nice and smooth
+;; but idgaf, this took me like 30 minutes. cope.
+(defpoll tf1r :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n1 | awk -F'bewbies' '{print $1}'")
+(defpoll tf1n :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n1 | awk -F'bewbies' '{print $2}'")
+(defpoll tf1i :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n1 | awk -F'bewbies' '{print $3}'")
+(defpoll tf1s :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n1 | awk -F'bewbies' '{print $4}'")
+
+(defpoll tf2r :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n2 | tail -n1 | awk -F'bewbies' '{print $1}'")
+(defpoll tf2n :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n2 | tail -n1 | awk -F'bewbies' '{print $2}'")
+(defpoll tf2i :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n2 | tail -n1 | awk -F'bewbies' '{print $3}'")
+(defpoll tf2s :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n2 | tail -n1 | awk -F'bewbies' '{print $4}'")
+
+(defpoll tf3r :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n3 | tail -n1 | awk -F'bewbies' '{print $1}'")
+(defpoll tf3n :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n3 | tail -n1 | awk -F'bewbies' '{print $2}'")
+(defpoll tf3i :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n3 | tail -n1 | awk -F'bewbies' '{print $3}'")
+(defpoll tf3s :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n3 | tail -n1 | awk -F'bewbies' '{print $4}'")
+
+(defpoll tf4r :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n4 | tail -n1 | awk -F'bewbies' '{print $1}'")
+(defpoll tf4n :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n4 | tail -n1 | awk -F'bewbies' '{print $2}'")
+(defpoll tf4i :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n4 | tail -n1 | awk -F'bewbies' '{print $3}'")
+(defpoll tf4s :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n4 | tail -n1 | awk -F'bewbies' '{print $4}'")
+
+(defpoll tf5r :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n5 | tail -n1 | awk -F'bewbies' '{print $1}'")
+(defpoll tf5n :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n5 | tail -n1 | awk -F'bewbies' '{print $2}'")
+(defpoll tf5i :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n5 | tail -n1 | awk -F'bewbies' '{print $3}'")
+(defpoll tf5s :interval "2s" "cat ~/.scripts/resources/tf_tops.txt | head -n5 | tail -n1 | awk -F'bewbies' '{print $4}'")

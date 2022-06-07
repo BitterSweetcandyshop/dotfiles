@@ -13,10 +13,29 @@ button {
   padding: 10px;
 }
 
+.notif {
+  background-color: #11111b;
+  margin: 15px;
+  border-radius: 15px;
+  min-height: 40px;
+}
+.pre-notif {
+  min-width: 50px;
+  background-color: #292a39;
+  border-radius: 7px 0px 0px 7px;
+  font-size: 25px;
+}
+.notif-content {
+  font-size: 20px;
+  padding: 10px 5px 10px 20px;
+}
+
 .header {
   font-size: 75px;
 }
-
+.tf-header {
+  font-size: 35px;
+}
 .musicstuff-side {
   font-size: 40px;
 }

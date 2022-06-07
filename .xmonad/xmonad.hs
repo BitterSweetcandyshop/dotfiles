@@ -92,7 +92,7 @@ clipboardy :: MonadIO m => m () -- Don't question it
 clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme ~/.config/rofi/config.rasi"
 
 centerlaunch = spawn "bash ~/.scripts/misc/center.sh"
-sidebarlaunch = spawn "exec ~/bin/eww open-many player time_side sys_side sliders_side"
+sidebarlaunch = spawn "exec /bin/eww open-many player notifs-hist time_side sys_side sliders_side"
 ewwclose = spawn "bash ~/.scripts/misc/close.sh"
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
 maimsave = spawn "maim -s ~/Documents/flameshot/$(date +%s).png && notify-send \"Screenshot\" \"Saved to Files\" -i flameshot"

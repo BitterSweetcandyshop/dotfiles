@@ -32,4 +32,4 @@ writable_source.write(players[new_index])
 writable_source.close()
 
 
-subprocess.run(["notify-send", "Changed Audio Source", players[new_index]])
+subprocess.run(["notify-send", "Changed Audio Source", players[new_index], "-t", "3000"])

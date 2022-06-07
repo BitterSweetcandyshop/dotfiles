@@ -1,0 +1,96 @@
+  ;; Center
+(defwidget header []
+    (box :orientation "h" :halign "center" :class "header" "CandyShop")
+)
+(defwidget player_side [] 
+(box :orientation "h" :space-evenly "true" 
+    (box :class "musicstuff-side" :orientation "v" :space-evenly "false" 
+        (box :halign "center" :class "musicinfo-side" "${music}")
+        (box :orientation "h" :halign "center" :class "musicbtn-side" :space-evenly "false" 
+            (button :onclick "playerctl previous -p $(cat ~/.scripts/music/source.txt)" "")
+            (button :class "pause-play-side" :onclick "playerctl play-pause -p $(cat ~/.scripts/music/source.txt)" {musicstat})
+            (button :onclick "playerctl next -p $(cat ~/.scripts/music/source.txt)" "")
+        )
+    )
+)
+)
+(defwidget search_full [] 
+    (box :orientation "h" :space-evenly "true" 
+        (button :class "search-full" :onclick "~/bin/launcher.sh" "")
+    )
+)
+(defwidget power_full [] 
+    (box :orientation "h" :space-evenly "true" 
+        (button :class "power-full" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout "60s" "")
+    )
+)
+(defwidget reboot_full [] 
+    (box :orientation "h" :space-evenly "true" 
+        (button :class "reboot-full" :onclick "~/.config/eww/scripts/reboot.sh" :timeout "60s" "")
+    )
+)
+(defwidget lock_full [] 
+    (box :orientation "h" :space-evenly "true" 
+        (button :class "lock-full" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout "60s" "")
+    )
+)
+(defwidget suspend_full [] 
+    (box :orientation "h" :space-evenly "true" 
+        (button :class "suspend-full" :onclick "~/.config/eww/scripts/suspend.sh" :timeout "60s" "")
+    )
+)
+(defwidget logout_full [] 
+    (box :orientation "h" :space-evenly "true" 
+        (button :class "logout-full" :onclick "~/.config/eww/scripts/logout.sh" :timeout "60s" "")
+    )
+)
+(defwidget ncmpcpp []
+    (box :orientation "h" :space-evenly "true"
+        (button :class "ncmpcpp" :onclick "bash ~/.scripts/misc/close.sh && alacritty --hold -e ncmpcpp" :timeout "60s" "🎵")
+    )
+)
+(defwidget profile [] 
+    (box :orientation "v" :space-evenly "false" :class "profile" 
+        (box :orientation "h" :space-evenly "false" 
+            (box :class "pfp")
+        )
+        (box :orientation "v" :space-evenly "false"  
+            (box :class "pfptxt" :valign "center" "BitterSweet")
+            (box :class "subpfptxt" :halign "center" "Dying for the bittersweet moments")
+        )
+    )
+)
+(defwidget home_dir [] 
+    (box :orientation "v" :space-evenly "true" :class "home-dir" 
+        (button :class "l1" :onclick "(bash ~/.scripts/misc/close.sh && nemo ~/${l1})" {l1-processed})
+        (button :class "l2" :onclick "(bash ~/.scripts/misc/close.sh && nemo ~/${l2})" {l2-processed})
+        (button :class "l3" :onclick "(bash ~/.scripts/misc/close.sh && nemo ~/${l3})" {l3-processed})
+        (button :class "l4" :onclick "(bash ~/.scripts/misc/close.sh && nemo ~/${l4})" {l4-processed})
+        (button :class "l5" :onclick "(bash ~/.scripts/misc/close.sh && nemo ~/${l5})" {l5-processed})
+        (button :class "l6" :onclick "(bash ~/.scripts/misc/close.sh && nemo ~/${l6})" {l6-processed})
+    )
+)
+(defwidget audio_source [] 
+    (box :orientation "v" :space-evenly "true" :class "home-dir" 
+        (button :class "l1" :onclick "echo %any > ~/.scripts/music/source.txt" "Auto")
+        (button :class "l2" :onclick "echo mpd > ~/.scripts/music/source.txt" "Mpd")
+        (button :class "l3" :onclick "echo spotify > ~/.scripts/music/source.txt" "Spotify")
+        (button :class "l4" :onclick "echo ncspot > ~/.scripts/music/source.txt" "Ncspot")
+        (button :class "l5" :onclick "echo tidal-hifi > ~/.scripts/music/source.txt" "Tidal")
+    )
+)
+(defwidget screenshot [] 
+    (box :orientation "v" :space-evenly "true" 
+        (button :class "screenshot-icon" :onclick "msclip -c" :timeout "60s" "")
+    )
+)
+(defwidget vpn [] 
+    (box :orientation "v" :space-evenly "true" 
+        (button :class "vpn-icon" :onclick "~/.config/eww/scripts/vpntoggle" :style "color: ${vpn-hex}" "嬨${getvpnstat}")
+    )
+)
+(defwidget donotdisturb [] 
+    (box :orientation "v" :space-evenly "true" :halign "center" 
+        (button :class "disturb-icon" :onclick "~/bin/do_not_disturb.sh" :style "color: ${disturb-hex}" "⏾")
+    )
+)

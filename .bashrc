@@ -8,7 +8,11 @@ export PATH="$PATH:$HOME/bin"
 
 cat ~/.config/neofetch/text_art.txt | tail -n12
 
+# No questions
+alias 'daddy'='sudo'
 alias ls='ls --color=auto'
+alias eww='/bin/eww'
+alias hsearch='python ~/Documents/Hentai/.Scripts/search'
 PS1='[\u@\h \W]\$ '
 #PS1="$(neofetch --stdout)"
 PS2='$$ '

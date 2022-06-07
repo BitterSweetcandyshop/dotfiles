@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$HOME/.scripts/resources/cover.png"

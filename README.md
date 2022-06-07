@@ -9,22 +9,25 @@ Transparent Catppuccin, Rats (no not the sussy baka software, the fluffy rodent)
 
 | Task              | Suspect     |
 |-------------------|-------------------------------------------------|
-| Music/Audio       | Playerctl, MPD, Ncspot, Ncmpcpp, Spotify, tidal-hifi, glava, cava
-| Widgets/Launch    | Conky, Polybar, Eww (wip), Rofi
+| Music/Audio       | sptlrx, Playerctl, MPD, Ncspot, Ncmpcpp, Spotify, tidal-hifi, glava, cava
+| Widgets/Launch    | Conky, Polybar, Rofi, Eww (3.0 binary in bin)
 | Files (wip)       | Ranger(snow), Nemo(dark)
-| Notifcations      | Dunst(catppuccin, wip)
-| Mods              | Glasscord (tidal-hifi, wip), Powercord, glassit(vsc), catppuccin(vsc), Open.asar
+| Notifcations      | Dunst(catppuccin)
+| Mods              | Glasscord (tidal-hifi, wip), Powercord(Discord), glassit(vsc), catppuccin(vsc), Open.asar
 | Compositor        | Picom
 | Clipboard         | Greenclip
 | Terminal          | Alacritty, Bash
-| Web               | DiscordCanary, Firefox
 | Icons             | Candy-icons, Adiwatta
-| Fonts             | PressStart2P-Regular, JetBrains Mono, Iosevka Nerd, (probs others idfk)
+| Fonts             | JetBrains Mono, Iosevka Nerd
 | Wallpapers        | [My Wallpaper Dump + Unixporn Dump](https://github.com/BitterSweetcandyshop/Wallpapers)
 | Startpage         | [Live](https://bittersweetcandyshop.github.io/startpage/), [Source](https://github.com/BitterSweetcandyshop/startpage)
 | Imposter          | Red (sus)
 ## Note
 > Almost everything relies on the .scripts folder, I made sure to do my best to make it usable by anyone though.
+
+> The lyrics background requires sptlrx!!
+
+> Make sure the eww alias in .bashrc is correct for you!
 
 ## Thanks
 - axarva (eww), base which I started from
@@ -38,6 +41,10 @@ Transparent Catppuccin, Rats (no not the sussy baka software, the fluffy rodent)
 
 ### Empty
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/normal.png?raw=true)
+### Rofi
+![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rofi.png?raw=true)
+### Lyrics on Background (powered by sptlrx+conky)
+![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/sptlrx_background.mp4?raw=true)
 ### Active
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rubber_room.png?raw=true)
 ### Eww Main

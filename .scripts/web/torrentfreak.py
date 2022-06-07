@@ -15,9 +15,14 @@ try:
         item = {}
         torrent = torrent.splitlines()
         item["title"] = torrent[3][4:-5]
+        item["title_fixed"] = torrent[3][4:-5]
+        if len(item["title"]) > 10:
+            item["title_fixed"] = item["title"][:7] + "..."
         item["rating"] = torrent[4].split("</a> / ")[0].split(">")[-1]
+        item["imdb"] = torrent[4].split("<a href=\"")[1].split("\"")[0]
+
         # I could really put anything here since the ods a movie title uses <<&&>> or something is small
-        top_ten += " " + item["rating"] + "|" + item["title"] + "\n"
+        top_ten += f"{item['rating']}bewbies{item['title']}bewbies{item['imdb']}bewbies{item['title_fixed']}\n"
 
     top_file = open(f"/home/{os.getlogin()}/.scripts/resources/tf_tops.txt", "w")
     top_file.write(top_ten[:-1])

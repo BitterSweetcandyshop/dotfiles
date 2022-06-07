@@ -1,0 +1,57 @@
+  ;; Side
+  (defwidget player [] 
+    (box :orientation "v" :space-evenly "false" 
+        (box :class "musicart" :style "background-image: url('${cover}');")
+        (box :class "musictitle" "${title}")
+    	(box :class "musicartist" "${artist}")
+    (box :orientation "h" :halign "center" :class "musicbtn" :space-evenly "false" 
+        (button :onclick "playerctl previous -p $(cat ~/.scripts/music/source.txt)" "")
+        (button :onclick "playerctl play-pause -p $(cat ~/.scripts/music/source.txt)" {musicstat})
+        (button :onclick "playerctl next -p $(cat ~/.scripts/music/source.txt)" "")
+	)
+        (box :orientation "h" :class "music-slider" :space-evenly "false" :halign "center" 
+            (scale :min 0 :max 101 :value {musicpos} :active "false")
+		)
+	)
+)
+(defwidget time_side [] 
+    (box :orientation "v" :space-evenly "false" 
+    (box :orientation "h" :class "time-side" :space-evenly "true" 
+        (box :class "hour-side" {hour})
+        	(box :class "minute-side" {min})
+		)
+    	(box :class "day-side" {day})
+	)
+)
+(defwidget sliders_side [] 
+	(box :orientation "v" :space-evenly "false" :class "sliders-side" 
+    	(box :orientation "h" :class "slider-vol-side" :space-evenly "false" 
+        	(box :class "label-vol-side" "")
+          	(scale :min 0 :max 101 :value {volume} :onchange "amixer -D pulse sset Master {}%")
+		)
+        (box :orientation "h" :class "slider-bright-side" :space-evenly "false" 
+        	(box :class "label-bright-side" "")
+          	(scale :min 0 :max 101 :value {bright} :onchange "brightnessctl s {}%")
+		)
+        (box :orientation "h" :class "slider-ram-side" :space-evenly "false" 
+          	(box :class "label-ram-side" "")
+        	(scale :min 0 :active "false" :max 101 :value {ram-used})
+		)
+        (box :orientation "h" :class "slider-battery-side" :space-evenly "false" 
+          (box :class "label-battery-side" {bat-icon})
+          (scale :min 0 :active "false" :max 101 :value {battery-remaining})
+		)
+	)
+)
+(defwidget sys_side [] 
+  	(box :orientation "v" :space-evenly "false" 
+    	(button :class "search-side" :onclick "~/bin/launcher.sh" "  Search...")
+        (box :orientation "h" :halign "center" :class "sysbtn" :space-evenly "true" 
+        	(button :class "shutdown-side" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout "60s" "")
+          	(button :class "reboot-side" :onclick "~/.config/eww/scripts/reboot.sh" :timeout "60s" "")
+          	(button :class "lock-side" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout "60s" "")
+          	(button :class "suspend-side" :onclick "~/.config/eww/scripts/suspend.sh" :timeout "60s" "")
+          	(button :class "logout-side" :onclick "~/.config/eww/scripts/logout.sh" :timeout "60s" "")
+		)
+	)
+)

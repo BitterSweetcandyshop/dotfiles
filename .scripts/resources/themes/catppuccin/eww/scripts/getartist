@@ -1,0 +1,2 @@
+#!/bin/bash
+playerctl -p $(cat ~/.scripts/music/source.txt) metadata artist
