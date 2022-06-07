@@ -44,7 +44,12 @@ Transparent Catppuccin, Rats (no not the sussy baka software, the fluffy rodent)
 ### Rofi
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rofi.png?raw=true)
 ### Lyrics on Background (powered by sptlrx+conky)
-![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/sptlrx_background.mp4?raw=true)
+> may not load, in media
+ <video width="320" height="240" controls>
+  <source src="https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/sptlrx_background.mp4?raw=true" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+
 ### Active
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rubber_room.png?raw=true)
 ### Eww Main
