@@ -45,6 +45,7 @@ Transparent Catppuccin, Rats (no not the sussy baka software, the fluffy rodent)
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rofi.png?raw=true)
 ### Lyrics on Background (powered by sptlrx+conky)
 > may not load, in media
+
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/sptlrx_back.gif?raw=true)
 
 ### Active
