@@ -32,6 +32,7 @@ button {
 
 .header {
   font-size: 75px;
+  font-family: 'KaushanScript';
 }
 .tf-header {
   font-size: 35px;
@@ -41,10 +42,10 @@ button {
 }
 
 .musicart {
-  background-size: 260px;
+  background-size:cover;
   min-height: 260px;
   min-width: 260px;
-  margin: 20px;
+  margin: 30px;
   border-radius: 10px;
 }
 

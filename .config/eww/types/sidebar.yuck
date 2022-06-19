@@ -1,7 +1,7 @@
   ;; Side
   (defwidget player [] 
     (box :orientation "v" :space-evenly "false" 
-        (box :class "musicart" :style "background-image: url('${cover}');")
+        (box :class "musicart" :style "background-image: url('../../.scripts/resources/cover.png');")
         (box :class "musictitle" "${title}")
     	(box :class "musicartist" "${artist}")
     (box :orientation "h" :halign "center" :class "musicbtn" :space-evenly "false" 

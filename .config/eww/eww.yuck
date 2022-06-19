@@ -40,7 +40,7 @@
 
   
     ;; Music vars
-(defpoll music :interval "5s"  "playerctl metadata --format '{{ artist }} - {{ title }}'")
+(defpoll music :interval "2s"  "playerctl metadata -p $(cat ~/.scripts/music/source.txt) --format '{{ artist }} - {{ title }}'")
 (defpoll artist :interval "3s"  "~/.config/eww/scripts/getartist")
 (defpoll title :interval "3s"  "~/.config/eww/scripts/echotitle")
 (defpoll volume :interval "16ms"  "~/.config/eww/scripts/getvol")
@@ -159,10 +159,10 @@
 	:geometry (geometry :x "975px" :y "450px" :width "200px" :height "400px")
 		(home_dir)
 )
-;;(defwindow audio_source 
-;;	:geometry (geometry :x "2610px" :y "450px" :width "200px" :height "400px")
-;;		(audio_source)
-;;)
+(defwindow audio_source 
+	:geometry (geometry :x "2610px" :y "450px" :width "200px" :height "400px")
+		(audio_source)
+)
 (defwindow top_torrents 
     :geometry (geometry :x "2610px" :y "885px" :width "200px" :height "400px")
         (top_torrents)
@@ -172,7 +172,7 @@
 		(donotdisturb)
 )
 (defwindow blur_full 
-	:geometry (geometry :x "0px" :y "0px" :width "100%" :height "100%")
+	:geometry (geometry :x "0px" :y "0px" :width "0%" :height "0%")
 		(blur_full)
 )
 
