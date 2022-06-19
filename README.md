@@ -60,6 +60,6 @@ Transparent Catppuccin, Rats (no not the ~~sussy baka software~~, the fluffy rod
 
 
 ~~fuck you~~ have a good day ~~twat~~<3
-> more details in readme2.md
+> more details, contact, and in-depth help in readme2.md
 
 > some more photos in media folder
