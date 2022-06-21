@@ -38,29 +38,32 @@ So you're here for a more indepth thing? There's not a lot more, but enjoy I sup
 ### The Eww Vizualizers
 > Sorry to inform you, it's just glava made to look like an eww widget. The configs are glava/eww_left and glava/ eww_right
 >
-> In .scripts/misc/center.sh and close.sh I do pkill glava each time since glava will just spawn more processes instead of overriding the old oness.
+> In `.scripts/misc/center.sh` and close.sh I do pkill glava each time since glava will just spawn more processes instead of overriding the old oness.
 >
 > There is also a delay after pkill in center.sh, why? no idea. If you can explain this to me, that would be great.
 ### Juuzou Mohawk Vizualizer
-> Toggle in .xmonad/xmonad.hs
+> Toggle in `.xmonad/xmonad.hs`
 >
 > I found out that the "circle" mod is just an arc that stretches almost 360%, I did some divison on the arc length and messed with the circle config to get the position right. Honestly, I only use it for demos honestly, it eats too much cpu/ram when I'm on discord or working on tidal-hifi css.
 
 ### Bottom left graph Vizualizer
-> Toggle in .xmonad/xmonad.hs
+> Toggle in `.xmonad/xmonad.hs`
 >
 > Like the juuzou visualizer, glava is known for eating some cpu so if you're on a laptop or something with limited cpu you now know.
 
 ## Tidal-Hifi and DiscordCanary (electron)
 > Glasscord is an electron tool that allows electron processes to have a transparent window. Also comes with a css injector. **THIS ABSOULTELY FUCKS APP PREFORMANCE AND CPU** 
 >
->I only really have it on for showcasing; disable in ~/.config/glasscord json iirc.
+>I only really have it on for showcasing; disable in `.config/glasscord` json iirc.
 
 ### Kernel-Mod on Tidal WIP
 >Kernel mod is an electron modifer that allows for plugins and the sort to be applied, I have hopes of injecting a download button, song.link button, and song importer eventually.
 
 ## Wallpaper
 > It's just Juuzou (they're a guy, idk y ppl care), it's on my github I have gotten dms about this, it's literaly on the repo already, just download it.
+
+### How is it dynamic??
+>So read `.scripts/music/dynamic_wallpaper.py`, but it comes down to changing all the pixels that have an rgb value (the dark color is 22, 19, 35 roughly). I change any pixel where it's red is above 25, green above 25, and blue above 40 to the color I extract from `subprocess.run(['magick', 'convert', '/home/bittersweet/.scripts/resources/cover.png[0]', '-colors', '3', '-unique-colors', 'txt:-']`. I do such a wide scale due to the "white" color not actually being all the same rgb value of white.
 
 ## Catppuccin
 ### Ratppuccin
@@ -75,13 +78,13 @@ So you're here for a more indepth thing? There's not a lot more, but enjoy I sup
 
 ## FAQ
 ### What do I do after I make the vercel app?
-> Navigate to the ~/.scripts/music/lrcdl.py and I have put more information there for you in comments
+> Navigate to the `.scripts/music/lrcdl.py` and I have put more information there for you in comments
 
 ### Where can I get the wallpaper?
 > *It's in the wallpapers folder.*
 
 ### Why isn't juuzou dynamic?
-> You have to go to `.scripts/music/art_updater` and change `is_bittersweet` to `True`, Make sure though to fix `.scripts/music/dynamic_wallpaper.py`
+> You have to go to `.scripts/music/art_updater` and change `is_bittersweet` to `True`, Make sure though to fix `.scripts/music/dynamic_wallpaper.py` for your system
 
 ### Why do you like rats?
 > They are suprisingly rather clean animals and are smart. I happen to also like how the RAT tool works well with one of my favourite animals
