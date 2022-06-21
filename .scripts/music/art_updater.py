@@ -11,6 +11,10 @@ import os
 #that's a garunteed 2 second delay.
 delay = 2
 
+# Go look at wallpaper_dynamic and fix like everything!!!!
+#There's a lot of file path issues if you're not bittersweet!
+is_bittersweet = False
+
 def no_cover():
     print("No cover update")
     shutil.copy(f"/home/{os.getlogin()}/.scripts/resources/no_cover.jpg", f"/home/{os.getlogin()}/.scripts/resources/cover.png")
@@ -119,5 +123,10 @@ while True:
                     if not str(check_life)[2:-3] == "Playing":
                         no_cover()
             print("Tidal update done")
+    
+    if is_bittersweet:
+        res = subprocess.run(["python", f"/home/{os.getlogin()}/.scripts/music/wallpaper_dynamic.py"])
+        print(res)
+        print("Updated Wallpaper.")
 
     sleep(delay)

@@ -37,16 +37,18 @@ Transparent Catppuccin, Rats (no not the ~~sussy baka software~~, the fluffy rod
 - you!, for being a ~~waste of space~~ kind enough to check out my stuff ~~you bitch~~ <3!
 
 ## Demos
-> There is nothign else below here, so yea
+> There is nothign else below here, go to readme2.md for more details
 
-### Empty
-![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/normal.png?raw=true)
 ### Rofi
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rofi.png?raw=true)
-### Lyrics on Background (powered by sptlrx+conky)
+### Lyrics on Background
 > may not load, in media folder
 
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/sptlrx_back.gif?raw=true)
+
+### Dynamic Juuzou
+![](https://cdn.discordapp.com/attachments/635625917623828520/988607972798255144/1655772737.png)
+![](https://cdn.discordapp.com/attachments/635625917623828520/988607973121196052/1655772750.png)
 
 ### Active
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/rubber_room.png?raw=true)
@@ -55,7 +57,10 @@ Transparent Catppuccin, Rats (no not the ~~sussy baka software~~, the fluffy rod
 
 
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/eww_main.png?raw=true)
+
 ### Music Players
+> Spotify, Ncspot, Tidal-Hifi, Mpd
+
 ![](https://github.com/BitterSweetcandyshop/dotfiles/blob/main/media/music_players.png?raw=true)
 
 

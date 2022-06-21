@@ -80,6 +80,9 @@ So you're here for a more indepth thing? There's not a lot more, but enjoy I sup
 ### Where can I get the wallpaper?
 > *It's in the wallpapers folder.*
 
+### Why isn't juuzou dynamic?
+> You have to go to `.scripts/music/art_updater` and change `is_bittersweet` to `True`, Make sure though to fix `.scripts/music/dynamic_wallpaper.py`
+
 ### Why do you like rats?
 > They are suprisingly rather clean animals and are smart. I happen to also like how the RAT tool works well with one of my favourite animals
 

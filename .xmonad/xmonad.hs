@@ -337,7 +337,7 @@ myStartupHook = do
   spawnOnce "dunst"
   spawnOnce "mpd"
 --  spawnOnce "glava &" -- This will 100% destroy your cpu
---  spawnOnce "glava -e bars_rc.glsl" -- This will only lightly stab your cpu
+  spawnOnce "glava -e bars_rc.glsl" -- This will only lightly stab your cpu
   spawn "mpDris2"
   spawn "xsetroot -cursor_name left_ptr"
   spawn "exec ~/bin/lock.sh"
